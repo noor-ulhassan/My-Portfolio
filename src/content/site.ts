@@ -34,8 +34,8 @@ export type SocialLink = {
 };
 
 export const socials: SocialLink[] = [
-  { label: "GitHub", icon: "github", href: "https://github.com/your-handle", handle: "@your-handle" },
-  { label: "LinkedIn", icon: "linkedin", href: "https://linkedin.com/in/your-handle", handle: "in/your-handle" },
+  { label: "GitHub", icon: "github", href: "https://github.com/noor-ulhassan", handle: "@noor-ulhassan" },
+  { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/in/noor-ul-hassan01/", handle: "noor-ul-hassan01" },
   { label: "Twitter / X", icon: "twitter", href: "https://x.com/your-handle", handle: "@your-handle" },
   { label: "Email", icon: "mail", href: `mailto:${profile.email}`, handle: profile.email },
 ];
@@ -57,8 +57,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Ledgerly",
-    meta: "Full-stack SaaS · 2024",
+    title: "Edu Quest",
+    meta: "Full-stack Gamified CS learning platform",
     description:
       "A real-time invoicing and expense platform for freelancers. Multi-tenant workspaces, Stripe billing, and PDF generation, with an editor that feels instant.",
     highlights: [
@@ -186,9 +186,9 @@ export type Education = {
 
 export const education: Education[] = [
   {
-    credential: "B.S. in Computer Science",
-    institution: "Your University",
-    period: "2019 — 2023",
+    credential: "B.S. in Software Engineering",
+    institution: "University Of Sargodha ",
+    period: "2022 — 2026",
     detail: "Coursework in algorithms, distributed systems, and human–computer interaction.",
   },
   {
@@ -220,10 +220,14 @@ export const stats: { value: string; label: string }[] = [
 
 export const contact = {
   /**
-   * Where the contact form sends submissions. Paste a Formspree endpoint
-   * (https://formspree.io/f/xxxxxxx) — free, no backend needed.
-   * Leave as an empty string to fall back to opening the visitor's email client.
+   * Endpoint the contact form posts to. Defaults to the built-in route handler
+   * at `/api/contact`, which sends real email via Resend when RESEND_API_KEY is
+   * set (see `.env.example`). If email isn't configured, the form automatically
+   * falls back to opening the visitor's email client.
+   *
+   * You can also point this at a third-party form service (e.g. Formspree) if
+   * you'd rather not run the backend.
    */
-  formEndpoint: "",
+  formEndpoint: "/api/contact",
 };
 

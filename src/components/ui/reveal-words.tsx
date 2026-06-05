@@ -38,7 +38,12 @@ export function RevealWords({
       }}
     >
       {words.map((word, i) => (
-        <span key={`${word}-${i}`} className="inline-block overflow-hidden align-bottom">
+        <span
+          key={`${word}-${i}`}
+          // Bottom padding + matching negative margin keeps the reveal mask from
+          // clipping descenders while preserving the tight visual line-height.
+          className="inline-block overflow-hidden align-bottom pb-[0.18em] -mb-[0.18em]"
+        >
           <motion.span
             className="inline-block"
             aria-hidden

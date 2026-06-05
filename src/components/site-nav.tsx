@@ -55,6 +55,17 @@ export function SiteNav() {
     };
   }, [open]);
 
+  function openMenu() {
+    window.dispatchEvent(new Event("lenis:stop"));
+    setOpen(true);
+  }
+
+  function closeMenu() {
+    // Resume scrolling synchronously so anchor links inside the menu can ease.
+    window.dispatchEvent(new Event("lenis:start"));
+    setOpen(false);
+  }
+
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       {/* scroll progress hairline */}
@@ -119,8 +130,9 @@ export function SiteNav() {
             </ActionLink>
             <button
               type="button"
-              onClick={() => setOpen(true)}
+              onClick={openMenu}
               aria-label="Open menu"
+              aria-expanded={open}
               className="grid size-10 place-items-center rounded-full border border-border-strong text-foreground md:hidden"
             >
               <Menu className="size-5" strokeWidth={1.75} />
@@ -142,7 +154,7 @@ export function SiteNav() {
             <div className="container-x flex items-center justify-end pt-3">
               <button
                 type="button"
-                onClick={() => setOpen(false)}
+                onClick={closeMenu}
                 aria-label="Close menu"
                 className="mt-3 grid size-10 place-items-center rounded-full border border-border-strong text-foreground"
               >
@@ -159,7 +171,7 @@ export function SiteNav() {
                 >
                   <a
                     href={`#${item.id}`}
-                    onClick={() => setOpen(false)}
+                    onClick={closeMenu}
                     className="flex items-baseline gap-4 py-3 font-serif text-5xl tracking-tight hover:text-accent"
                   >
                     <span className="label text-faint">{`0${i + 1}`}</span>

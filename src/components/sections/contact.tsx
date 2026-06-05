@@ -21,7 +21,7 @@ export function Contact() {
 
         <Reveal
           as="h2"
-          className="max-w-4xl text-balance font-serif text-[length:var(--text-display)] leading-[var(--text-display)] tracking-[-0.02em]"
+          className="max-w-4xl text-balance font-serif text-display tracking-[-0.02em]"
         >
           Let&rsquo;s make something{" "}
           <span className="serif-italic text-accent">worth shipping</span>.

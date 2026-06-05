@@ -39,7 +39,7 @@ export function SectionHeading({
       <Reveal
         as="h2"
         delay={0.05}
-        className="max-w-3xl text-[length:var(--text-h2)] leading-[var(--text-h2)] tracking-tight text-balance"
+        className="max-w-3xl text-h2 tracking-tight text-balance"
       >
         {title}
       </Reveal>

@@ -84,6 +84,14 @@
     html {
       scroll-behavior: auto;
     }
+    /* Honor the OS setting: neutralize looping/long animations and transitions. */
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
   }
 
   body {
@@ -224,4 +232,22 @@
     -webkit-mask-image: radial-gradient(ellipse at center, black 10%, transparent 70%);
     mask-image: radial-gradient(ellipse at center, black 10%, transparent 70%);
   }
+}
+
+/* Lenis smooth-scroll base styles (only active once Lenis adds these classes). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }

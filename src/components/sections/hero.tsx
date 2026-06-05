@@ -7,6 +7,10 @@ import { Reveal } from "@/components/ui/reveal";
 import { ScrollCue } from "./scroll-cue";
 
 export function Hero() {
+  const parts = profile.name.trim().split(/\s+/);
+  const lastWord = parts.length > 1 ? parts[parts.length - 1] : parts[0];
+  const leadWords = parts.length > 1 ? parts.slice(0, -1).join(" ") : "";
+
   return (
     <section
       id="top"
@@ -40,19 +44,23 @@ export function Hero() {
           </span>
         </Reveal>
 
-        <h1 className="font-serif text-[length:var(--text-display)] leading-[var(--text-display)] tracking-[-0.02em]">
-          <RevealWords text={profile.name.split(" ").slice(0, -1).join(" ")} className="block" />
+        <h1 className="font-serif text-display tracking-[-0.02em]">
+          {leadWords && <RevealWords text={leadWords} className="block" />}
           <span className="block">
             <RevealWords
-              text={profile.name.split(" ").slice(-1).join(" ")}
+              text={lastWord}
               className="serif-italic text-accent"
-              delay={0.15}
+              delay={leadWords ? 0.15 : 0}
             />
           </span>
         </h1>
 
-        <div className="mt-10 grid gap-10 md:grid-cols-[1.1fr_1fr] md:items-end">
-          <Reveal delay={0.3} as="p" className="max-w-md text-balance text-xl leading-relaxed text-muted sm:text-2xl">
+        <div className="mt-12 grid gap-10 md:grid-cols-[1.1fr_1fr] md:items-end">
+          <Reveal
+            delay={0.3}
+            as="p"
+            className="max-w-md text-balance text-xl leading-relaxed text-muted sm:text-2xl"
+          >
             {profile.role} — {profile.tagline}
           </Reveal>
 
