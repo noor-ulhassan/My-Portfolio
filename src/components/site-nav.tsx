@@ -87,9 +87,11 @@ export function SiteNav() {
             href="#top"
             className="group flex items-center gap-2 pl-2 pr-3 font-serif text-lg tracking-tight"
           >
-            <span className="grid size-7 place-items-center rounded-full bg-accent text-sm text-accent-contrast">
-              {profile.name.charAt(0)}
-            </span>
+            <img
+              src="/profile.jpeg"
+              alt={profile.name}
+              className="size-7 rounded-full object-cover"
+            />
             <span className="hidden sm:inline">{profile.name.split(" ")[0]}</span>
           </a>
 

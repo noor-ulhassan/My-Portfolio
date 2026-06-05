@@ -36,7 +36,7 @@ export type SocialLink = {
 export const socials: SocialLink[] = [
   { label: "GitHub", icon: "github", href: "https://github.com/noor-ulhassan", handle: "@noor-ulhassan" },
   { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/in/noor-ul-hassan01/", handle: "noor-ul-hassan01" },
-  { label: "Twitter / X", icon: "twitter", href: "https://x.com/your-handle", handle: "@your-handle" },
+  { label: "Twitter / X", icon: "twitter", href: "https://x.com/nurulhassan01", handle: "@nurulhassan01" },
   { label: "Email", icon: "mail", href: `mailto:${profile.email}`, handle: profile.email },
 ];
 
