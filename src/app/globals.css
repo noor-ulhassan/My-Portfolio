@@ -1,26 +1,227 @@
 @import "tailwindcss";
 
+/* next-themes toggles the `.dark` class on <html>; ship dark by default. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ----------------------------------------------------------------------------
+   Warm Minimal / Refined — design tokens
+   Light = warm paper. Dark = warm espresso. One terracotta accent throughout.
+---------------------------------------------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* warm paper light theme */
+  --background: #f3ede1;
+  --surface: #fbf7ee;
+  --surface-2: #efe7d7;
+  --foreground: #221d18;
+  --muted: #6b6155;
+  --faint: #8c8273;
+  --border: #e0d6c3;
+  --border-strong: #cdc1aa;
+  --accent: #b15a2b;
+  --accent-soft: #c9764a;
+  --accent-contrast: #fbf7ee;
+  --shadow-color: 28 22 16;
+
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-hanken);
+  --font-mono: var(--font-jb);
+}
+
+.dark {
+  /* warm espresso dark theme */
+  --background: #14110d;
+  --surface: #1b1711;
+  --surface-2: #221d16;
+  --foreground: #ece3d3;
+  --muted: #9c9181;
+  --faint: #756a5b;
+  --border: #2c261d;
+  --border-strong: #3a3327;
+  --accent: #e08a52;
+  --accent-soft: #c9764a;
+  --accent-contrast: #14110d;
+  --shadow-color: 0 0 0;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-contrast: var(--accent-contrast);
+
+  --font-sans: var(--font-hanken);
+  --font-serif: var(--font-fraunces);
+  --font-mono: var(--font-jb);
+
+  /* fluid type scale */
+  --text-display: clamp(2.75rem, 1.5rem + 6vw, 7rem);
+  --text-display--line-height: 0.95;
+  --text-h2: clamp(2rem, 1.2rem + 3.2vw, 3.5rem);
+  --text-h2--line-height: 1.02;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* offset for the fixed nav when jumping to #anchors */
+    scroll-padding-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-contrast);
+  }
+
+  /* warm, theme-aware scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 999px;
+    border: 3px solid var(--background);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif), ui-serif, Georgia, serif;
+    font-weight: 400;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* eyebrow / mono section label */
+  .label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* generous page rhythm */
+  .section {
+    padding-block: clamp(5rem, 3rem + 9vw, 9rem);
+  }
+
+  .container-x {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 80rem;
+    padding-inline: clamp(1.25rem, 0.5rem + 3vw, 4rem);
+  }
+
+  /* animated underline for inline + nav links */
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.12em;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.45s var(--ease-out-expo);
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@layer utilities {
+  /* serif italic accent for emphasized words */
+  .serif-italic {
+    font-family: var(--font-serif), ui-serif, Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* subtle film grain overlay — fixed, non-interactive */
+  .grain::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .dark .grain::before {
+    opacity: 0.06;
+  }
+
+  /* infinite horizontal scroll for the skills band */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee var(--marquee-duration, 40s) linear infinite;
+  }
+  .marquee-pause:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none;
+    }
+  }
+
+  /* warm hairline grid used as section texture */
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, var(--border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    background-size: 4rem 4rem;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 10%, transparent 70%);
+    mask-image: radial-gradient(ellipse at center, black 10%, transparent 70%);
+  }
 }
