@@ -58,7 +58,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Edu Quest",
-    meta: "Full-stack Gamified CS learning platform",
+    meta: "Gamified CS learning platform",
     description:
       "A real-time invoicing and expense platform for freelancers. Multi-tenant workspaces, Stripe billing, and PDF generation, with an editor that feels instant.",
     highlights: [

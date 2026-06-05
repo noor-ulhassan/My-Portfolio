@@ -90,7 +90,7 @@ export function SiteNav() {
             <img
               src="/profile.jpeg"
               alt={profile.name}
-              className="size-7 rounded-full object-cover"
+              className="size-9 rounded-full object-cover"
             />
             <span className="hidden sm:inline">{profile.name.split(" ")[0]}</span>
           </a>
