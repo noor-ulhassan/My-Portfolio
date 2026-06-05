@@ -215,3 +215,15 @@ export const stats: { value: string; label: string }[] = [
   { value: "30+", label: "Projects shipped" },
   { value: "10+", label: "Happy clients & teams" },
 ];
+
+/* --------------------------------------------------------------------------- */
+
+export const contact = {
+  /**
+   * Where the contact form sends submissions. Paste a Formspree endpoint
+   * (https://formspree.io/f/xxxxxxx) — free, no backend needed.
+   * Leave as an empty string to fall back to opening the visitor's email client.
+   */
+  formEndpoint: "",
+};
+

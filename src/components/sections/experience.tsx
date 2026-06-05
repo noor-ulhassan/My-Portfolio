@@ -1,6 +1,7 @@
 import { experience, education } from "@/content/site";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
+import { TechIcon } from "@/components/tech-icon";
 
 export function Experience() {
   return (
@@ -64,8 +65,9 @@ export function Experience() {
                     {job.stack.map((t) => (
                       <li
                         key={t}
-                        className="rounded-full border border-border px-3 py-1 font-mono text-[0.7rem] text-muted"
+                        className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1 font-mono text-[0.7rem] text-muted"
                       >
+                        <TechIcon name={t} className="size-3.5 text-faint" />
                         {t}
                       </li>
                     ))}

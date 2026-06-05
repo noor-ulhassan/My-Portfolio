@@ -6,6 +6,7 @@ import { motion, useMotionTemplate, useMotionValue } from "motion/react";
 import type { Project } from "@/content/site";
 import { cn } from "@/lib/utils";
 import { Icon } from "@/components/icon";
+import { TechIcon } from "@/components/tech-icon";
 
 function initials(title: string) {
   return title
@@ -101,8 +102,9 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           {project.tech.map((t) => (
             <li
               key={t}
-              className="rounded-full border border-border bg-surface-2/60 px-3 py-1 font-mono text-[0.7rem] text-muted"
+              className="flex items-center gap-1.5 rounded-full border border-border bg-surface-2/60 px-3 py-1 font-mono text-[0.7rem] text-muted"
             >
+              <TechIcon name={t} className="size-3.5 text-faint" />
               {t}
             </li>
           ))}
