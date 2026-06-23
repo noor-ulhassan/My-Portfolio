@@ -202,6 +202,10 @@
     font-feature-settings: "ss01", "cv01";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* Hard stop on accidental horizontal scroll. `clip` (not `hidden`) keeps
+       vertical scrolling, sticky, and Lenis untouched. Intentional horizontal
+       scroll regions (code card, marquee) isolate their own overflow. */
+    overflow-x: clip;
     @apply bg-background text-foreground;
   }
 

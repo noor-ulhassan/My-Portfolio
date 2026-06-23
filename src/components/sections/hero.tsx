@@ -95,7 +95,7 @@ export function Hero() {
           </ActionLink>
         </Reveal>
 
-        <Reveal delay={0.55} className="mt-10 flex items-center gap-4">
+        <Reveal delay={0.55} className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
           <span className="inline-flex items-center gap-1.5 text-sm text-faint">
             <MapPin className="size-4" strokeWidth={1.5} aria-hidden />
             {profile.location}

@@ -52,15 +52,15 @@ export function Contact() {
                   rel="noopener noreferrer"
                   className="group flex items-center justify-between gap-4 py-4 transition-colors hover:text-accent"
                 >
-                  <span className="flex items-center gap-3">
-                    <Icon name={s.icon} className="size-4 text-accent" />
-                    <span className="flex flex-col">
+                  <span className="flex min-w-0 items-center gap-3">
+                    <Icon name={s.icon} className="size-4 shrink-0 text-accent" />
+                    <span className="flex min-w-0 flex-col">
                       <span className="text-sm text-foreground">{s.label}</span>
-                      <span className="font-mono text-xs text-faint">{s.handle}</span>
+                      <span className="truncate font-mono text-xs text-faint">{s.handle}</span>
                     </span>
                   </span>
                   <ArrowUpRight
-                    className="size-4 text-faint transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
+                    className="size-4 shrink-0 text-faint transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
                     strokeWidth={1.75}
                     aria-hidden
                   />

@@ -113,14 +113,14 @@ export function About() {
 
         {/* me, as code + the journey */}
         <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-start">
-          <Reveal>
+          <Reveal className="min-w-0">
             <div className="mb-4 flex items-center gap-3">
               <span className="label">{"// me, as code"}</span>
             </div>
             <CodeCard varName={firstName} entries={codeEntries} />
           </Reveal>
 
-          <Reveal delay={0.1}>
+          <Reveal delay={0.1} className="min-w-0">
             <div className="mb-4 flex items-center gap-3">
               <span className="label">{"// the journey"}</span>
             </div>

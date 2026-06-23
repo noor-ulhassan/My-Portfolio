@@ -61,7 +61,7 @@ export function CodeCard({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-2xl border border-border bg-surface/60 shadow-[0_14px_40px_-22px_rgb(0_0_0/0.5)] backdrop-blur",
+        "min-w-0 max-w-full overflow-hidden rounded-2xl border border-border bg-surface/60 shadow-[0_14px_40px_-22px_rgb(0_0_0/0.5)] backdrop-blur",
         className,
       )}
     >
@@ -74,7 +74,7 @@ export function CodeCard({
       </div>
 
       {/* code body */}
-      <pre className="overflow-x-auto p-5 font-mono text-sm leading-relaxed sm:p-6">
+      <pre className="overflow-x-auto p-5 font-mono text-xs leading-relaxed sm:p-6 sm:text-sm">
         <code className="grid gap-0.5">
           <Line n={1}>
             <span className={C.kw}>const</span>{" "}
