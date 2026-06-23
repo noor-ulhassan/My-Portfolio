@@ -15,7 +15,7 @@ export const profile = {
   tagline: "I build full-stack products with the MERN stack & Next.js.",
   /** 2–3 sentences. The recruiter-skim version of who you are. */
   summary:
-    "Full-stack engineer focused on shipping fast, accessible web apps end to end — from data models and APIs to the last pixel of the interface. I care about clean architecture, measurable performance, and interfaces that feel effortless.",
+    "I'm a full-stack developer who builds web apps with the MERN stack and Next.js — from the database and API to the parts people actually click. I like clean, readable code and apps that stay fast and simple to use.",
   location: "Pakistan",
   /** Set false to show a muted “open to opportunities” chip instead of “available”. */
   available: true,
@@ -123,55 +123,53 @@ export const skills: SkillGroup[] = [
 
 /* --------------------------------------------------------------------------- */
 
-export type Experience = {
-  role: string;
-  company: string;
-  period: string;
-  location?: string;
-  summary: string;
-  achievements: string[];
-  stack?: string[];
+export type JourneyEntry = {
+  /** e.g. "2024" or "Next". */
+  year: string;
+  title: string;
+  description: string;
+  /** Marks the final, forward-looking node (rendered with emphasis). */
+  current?: boolean;
 };
 
-export const experience: Experience[] = [
+/** "The journey" — a milestone timeline of how you got here. Edit freely. */
+export const journey: JourneyEntry[] = [
   {
-    role: "Full-Stack Engineer",
-    company: "Acme Labs",
-    period: "2023 — Present",
-    location: "Remote",
-    summary:
-      "Lead frontend architecture and own several backend services for a B2B analytics product used by 200+ teams.",
-    achievements: [
-      "Drove a 40% improvement in Core Web Vitals by re-architecting the rendering pipeline",
-      "Shipped a design-system refactor adopted across 6 product squads",
-      "Mentored two junior engineers through their first production launches",
-    ],
-    stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
+    year: "2022",
+    title: "Started the journey",
+    description:
+      "Began my Software Engineering degree and built a foundation in programming, OOP, and data structures.",
   },
   {
-    role: "MERN Developer",
-    company: "Brightside Studio",
-    period: "2022 — 2023",
-    location: "Remote",
-    summary:
-      "Built client web apps end to end, from MongoDB schemas to polished React frontends, on tight delivery timelines.",
-    achievements: [
-      "Delivered 8 client projects on schedule with a 100% retention rate",
-      "Standardized the team's API layer, cutting boilerplate by ~30%",
-    ],
-    stack: ["React", "Node.js", "Express", "MongoDB"],
+    year: "2023",
+    title: "Found the web",
+    description:
+      "Started teaching myself web development, and it quickly became the thing I most enjoyed building.",
   },
   {
-    role: "Frontend Developer (Freelance)",
-    company: "Independent",
-    period: "2021 — 2022",
-    summary:
-      "Partnered with founders and small teams to turn Figma designs into responsive, accessible production sites.",
-    achievements: [
-      "Built 15+ marketing sites and dashboards for early-stage startups",
-      "Maintained a 5-star rating across freelance platforms",
-    ],
-    stack: ["React", "Next.js", "Tailwind"],
+    year: "2024",
+    title: "Became a MERN developer",
+    description:
+      "Got comfortable with React, Node, Express, and MongoDB, and built complete apps with them.",
+  },
+  {
+    year: "2025",
+    title: "Explored AI",
+    description:
+      "Built EduQuest — a learning app with an AI tutor and live coding challenges.",
+  },
+  {
+    year: "2026",
+    title: "Learned to ship",
+    description:
+      "Picked up Docker, deployment, and the cloud, so I can take a project from my laptop to a live site.",
+  },
+  {
+    year: "Next",
+    title: "Keep building",
+    description:
+      "Looking for a role where I can keep building real products and learn from a strong team.",
+    current: true,
   },
 ];
 
@@ -201,11 +199,13 @@ export const education: Education[] = [
 
 /* --------------------------------------------------------------------------- */
 
-/** Section anchors used by the nav. Order here = order in the nav. */
+/** Section anchors used by the nav. Order here = order in the nav.
+ *  Each `id` must match the `id` on the corresponding <section>. */
 export const navItems = [
-  { id: "work", label: "Work" },
   { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
+  { id: "work", label: "Projects" },
+  { id: "skills", label: "Skills" },
+  { id: "education", label: "Education" },
   { id: "contact", label: "Contact" },
 ] as const;
 

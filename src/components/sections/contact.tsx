@@ -3,28 +3,31 @@ import { profile, socials } from "@/content/site";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/ui/reveal";
 import { MailButton } from "@/components/ui/mail-button";
+import { Spotlight } from "@/components/ui/spotlight";
 import { ContactForm } from "./contact-form";
 
 export function Contact() {
   return (
     <section id="contact" className="section relative overflow-hidden border-t border-border">
       <div
-        className="pointer-events-none absolute -top-40 right-0 -z-10 size-[36rem] rounded-full bg-accent/10 blur-[130px]"
+        className="pointer-events-none absolute -top-40 right-0 -z-10 size-[36rem] rounded-full bg-accent/6 blur-[130px]"
         aria-hidden
       />
+      <Spotlight className="-top-60 right-0 -z-10 opacity-60 md:right-1/4" />
 
       <div className="container-x flex flex-col gap-12">
         <Reveal className="flex items-center gap-3">
+          <span className="label text-faint tabular-nums">05</span>
           <span className="label">Contact</span>
           <span className="h-px w-10 bg-border-strong" aria-hidden />
         </Reveal>
 
         <Reveal
           as="h2"
-          className="max-w-4xl text-balance font-serif text-display tracking-[-0.02em]"
+          className="text-metallic max-w-4xl text-balance font-display text-display font-semibold tracking-[-0.02em]"
         >
           Let&rsquo;s make something{" "}
-          <span className="serif-italic text-accent">worth shipping</span>.
+          <span className="serif-italic font-normal text-metallic-orange">worth shipping</span>.
         </Reveal>
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">

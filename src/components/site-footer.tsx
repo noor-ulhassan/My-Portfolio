@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { ArrowUp } from "lucide-react";
-import { navItems, profile, socials } from "@/content/site";
+import { profile, socials } from "@/content/site";
 import { Icon } from "./icon";
 
 export function SiteFooter() {
@@ -9,20 +10,12 @@ export function SiteFooter() {
     <footer className="border-t border-border">
       <div className="container-x flex flex-col gap-10 py-12">
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
-          <a href="#top" className="font-serif text-2xl tracking-tight">
+          <a
+            href="#top"
+            className="text-metallic font-display text-2xl font-semibold tracking-tight"
+          >
             {profile.name}
           </a>
-          <nav className="flex flex-wrap gap-x-6 gap-y-2">
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                className="link-underline text-sm text-muted hover:text-foreground"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
           <div className="flex items-center gap-2">
             {socials.map((s) => (
               <a
@@ -43,13 +36,21 @@ export function SiteFooter() {
           <p>
             &copy; {year} {profile.name}. Built with Next.js &amp; Tailwind.
           </p>
-          <a
-            href="#top"
-            className="link-underline inline-flex items-center gap-1.5 hover:text-foreground"
-          >
-            Back to top
-            <ArrowUp className="size-3.5" strokeWidth={1.75} aria-hidden />
-          </a>
+          <div className="flex items-center gap-6">
+            <Link
+              href="/privacy"
+              className="link-underline transition-colors hover:text-foreground"
+            >
+              Privacy Policy
+            </Link>
+            <a
+              href="#top"
+              className="link-underline inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
+            >
+              Back to top
+              <ArrowUp className="size-3.5" strokeWidth={1.75} aria-hidden />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

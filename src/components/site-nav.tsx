@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navItems, profile } from "@/content/site";
-import { ThemeToggle } from "./theme-toggle";
 import { ActionLink } from "./ui/action-link";
 
 export function SiteNav() {
@@ -85,14 +85,21 @@ export function SiteNav() {
         >
           <a
             href="#top"
-            className="group flex items-center gap-2 pl-2 pr-3 font-serif text-lg tracking-tight"
+            aria-label={`${profile.name} — home`}
+            className="group flex items-center gap-2.5 pl-1.5 pr-3"
           >
-            <img
+            <Image
               src="/profile.jpeg"
               alt={profile.name}
-              className="size-9 rounded-full object-cover"
+              width={36}
+              height={36}
+              priority
+              className="size-9 rounded-full object-cover ring-1 ring-border-strong"
             />
-            <span className="hidden sm:inline">{profile.name.split(" ")[0]}</span>
+            <span className="hidden text-lg font-semibold tracking-tight sm:inline">
+              <span className="text-metallic">{profile.name.split(" ")[0]}</span>
+              <span className="text-accent">.</span>
+            </span>
           </a>
 
           <ul className="hidden items-center gap-1 md:flex">
@@ -103,14 +110,14 @@ export function SiteNav() {
                   className={cn(
                     "relative rounded-full px-4 py-2 text-sm transition-colors",
                     active === item.id
-                      ? "text-foreground"
+                      ? "text-accent"
                       : "text-muted hover:text-foreground",
                   )}
                 >
                   {active === item.id && (
                     <motion.span
                       layoutId="nav-pill"
-                      className="absolute inset-0 -z-10 rounded-full bg-surface-2"
+                      className="absolute inset-0 -z-10 rounded-full border border-accent/20 bg-accent/10"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -121,7 +128,13 @@ export function SiteNav() {
           </ul>
 
           <div className="flex items-center gap-2">
-            <ThemeToggle />
+            <a
+              href={profile.resumeUrl}
+              download
+              className="link-underline hidden text-sm text-accent transition-colors hover:text-accent-soft sm:inline-block"
+            >
+              Resume
+            </a>
             <ActionLink
               href="#contact"
               variant="primary"
@@ -174,13 +187,28 @@ export function SiteNav() {
                   <a
                     href={`#${item.id}`}
                     onClick={closeMenu}
-                    className="flex items-baseline gap-4 py-3 font-serif text-5xl tracking-tight hover:text-accent"
+                    className="flex items-baseline gap-4 py-3 font-display text-5xl font-semibold tracking-tight transition-colors hover:text-accent"
                   >
                     <span className="label text-faint">{`0${i + 1}`}</span>
                     {item.label}
                   </a>
                 </motion.li>
               ))}
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.08 * navItems.length + 0.1 }}
+              >
+                <a
+                  href={profile.resumeUrl}
+                  download
+                  onClick={closeMenu}
+                  className="flex items-baseline gap-4 py-3 font-display text-5xl font-semibold tracking-tight text-accent transition-colors hover:text-accent-soft"
+                >
+                  <span className="label text-faint">{`0${navItems.length + 1}`}</span>
+                  Resume
+                </a>
+              </motion.li>
             </ul>
           </motion.div>
         )}

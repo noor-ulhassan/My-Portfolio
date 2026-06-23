@@ -1,10 +1,11 @@
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/sections/hero";
-import { Projects } from "@/components/sections/projects";
 import { About } from "@/components/sections/about";
+import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
-// import { Experience } from "@/components/sections/experience";
+import { Education } from "@/components/sections/education";
+import { ResumeCta } from "@/components/sections/resume-cta";
 import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
@@ -13,10 +14,11 @@ export default function Home() {
       <SiteNav />
       <main>
         <Hero />
-        <Projects />
         <About />
+        <Projects />
         <Skills />
-        {/* <Experience /> */}
+        <Education />
+        <ResumeCta />
         <Contact />
       </main>
       <SiteFooter />

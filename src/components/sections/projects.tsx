@@ -4,19 +4,17 @@ import { ProjectCard } from "./project-card";
 
 export function Projects() {
   return (
-    <section id="work" className="section">
+    <section id="work" className="section border-t border-border">
       <div className="container-x">
         <SectionHeading
-          index="01"
-          label="Selected Work"
+          index="02"
+          label="Work"
           title={
             <>
-              Things I&rsquo;ve designed,
-              <br />
-              built, and <span className="serif-italic text-accent">shipped</span>.
+              Featured <span className="serif-italic text-metallic-orange">Work.</span>
             </>
           }
-          intro="A few projects that show how I think about product, performance, and the details in between."
+          intro="A few things I've built, and what I learned making them."
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-2">

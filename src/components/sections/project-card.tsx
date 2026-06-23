@@ -17,6 +17,16 @@ function initials(title: string) {
     .toUpperCase();
 }
 
+/** Host shown in the faux browser bar of a featured project. */
+function prettyUrl(url?: string) {
+  if (!url) return "localhost:3000";
+  try {
+    return new URL(url).host.replace(/^www\./, "");
+  } catch {
+    return url.replace(/^https?:\/\//, "");
+  }
+}
+
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   const cardRef = useRef<HTMLElement>(null);
   const mx = useMotionValue(0);
@@ -38,10 +48,11 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       onMouseMove={onMove}
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -6 }}
       viewport={{ once: true, margin: "0px 0px -10% 0px" }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: (index % 2) * 0.08 }}
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-surface/40 transition-colors duration-500 hover:border-border-strong",
+        "group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-surface/40 transition-colors duration-500 hover:border-accent/30",
         project.featured ? "md:col-span-2 md:grid md:grid-cols-2" : "",
       )}
     >
@@ -52,18 +63,31 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         style={{ background: spotlight }}
       />
 
-      {/* visual panel (featured only) */}
+      {/* visual panel (featured only) — faux browser window */}
       {project.featured && (
-        <div className="relative order-last hidden overflow-hidden border-border md:order-first md:flex md:border-r">
-          <div className="grid-lines absolute inset-0 opacity-50" aria-hidden />
+        <div className="relative order-last hidden overflow-hidden border-border p-8 md:order-first md:flex md:items-center md:border-r">
+          <div className="grid-lines absolute inset-0 opacity-40" aria-hidden />
           <div
-            className="absolute inset-0 bg-gradient-to-br from-accent/15 via-transparent to-transparent"
+            className="absolute inset-0 bg-linear-to-br from-accent/15 via-transparent to-transparent"
             aria-hidden
           />
-          <div className="relative flex flex-1 items-center justify-center p-10">
-            <span className="font-serif text-[7rem] leading-none tracking-tight text-foreground/85 transition-transform duration-700 group-hover:scale-105">
-              {initials(project.title)}
-            </span>
+          <div className="relative w-full overflow-hidden rounded-xl border border-border-strong bg-surface-2/70 shadow-[0_14px_40px_-22px_rgb(0_0_0/0.55)] backdrop-blur transition-transform duration-700 group-hover:-translate-y-1">
+            {/* title bar */}
+            <div className="flex items-center gap-2 border-b border-border px-4 py-3">
+              <span className="size-3 rounded-full bg-red-400/70" aria-hidden />
+              <span className="size-3 rounded-full bg-amber-400/70" aria-hidden />
+              <span className="size-3 rounded-full bg-emerald-400/70" aria-hidden />
+              <span className="ml-3 flex-1 truncate rounded-md bg-background/60 px-3 py-1 font-mono text-[0.7rem] text-faint">
+                {prettyUrl(project.links.live)}
+              </span>
+            </div>
+            {/* viewport */}
+            <div className="relative grid aspect-16/10 place-items-center overflow-hidden bg-linear-to-br from-surface to-background">
+              <div className="grid-lines absolute inset-0 opacity-30" aria-hidden />
+              <span className="text-metallic font-display text-[5.5rem] font-semibold leading-none transition-transform duration-700 group-hover:scale-105">
+                {initials(project.title)}
+              </span>
+            </div>
           </div>
         </div>
       )}
@@ -79,7 +103,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           </span>
         </div>
 
-        <h3 className="font-serif text-3xl tracking-tight sm:text-4xl">
+        <h3 className="text-metallic font-display text-3xl font-semibold tracking-tight sm:text-4xl">
           {project.title}
         </h3>
 

@@ -107,7 +107,7 @@ export function ContactForm({ toEmail }: { toEmail: string }) {
             <span className="grid size-14 place-items-center rounded-full bg-accent/15 text-accent">
               <Check className="size-7" strokeWidth={2} aria-hidden />
             </span>
-            <h3 className="font-serif text-2xl">
+            <h3 className="text-metallic font-display text-2xl font-semibold tracking-tight">
               {usedMailto ? "Opening your email app" : "Message sent"}
             </h3>
             <p className="max-w-xs text-pretty text-muted">
@@ -210,7 +210,7 @@ export function ContactForm({ toEmail }: { toEmail: string }) {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 font-medium text-accent-contrast transition-colors hover:bg-accent-soft disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="bg-metallic-orange group inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-medium text-accent-contrast transition-colors duration-300 hover:brightness-[1.04] disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {status === "submitting" ? (
                 <>

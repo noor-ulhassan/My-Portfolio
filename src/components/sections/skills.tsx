@@ -1,13 +1,14 @@
 import type { CSSProperties } from "react";
 import { skills } from "@/content/site";
 import { Reveal } from "@/components/ui/reveal";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { TechIcon, getTechColor } from "@/components/tech-icon";
 
 /** A single tech: monochrome glyph + label that warms to its brand color on hover. */
 function TechChip({ name }: { name: string }) {
   return (
     <li
-      className="group/chip flex items-center gap-2.5 rounded-xl border border-border bg-surface/40 px-4 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-border-strong hover:bg-surface-2/60"
+      className="group/chip flex items-center gap-2.5 rounded-xl border border-border bg-surface/40 px-4 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-surface-2/60 hover:ring-1 hover:ring-accent/20"
       style={{ "--brand": getTechColor(name) } as CSSProperties}
     >
       <TechIcon
@@ -21,7 +22,7 @@ function TechChip({ name }: { name: string }) {
 
 function TechMarquee({ items }: { items: string[] }) {
   return (
-    <div className="group relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+    <div className="group relative mt-14 flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
       {[0, 1].map((copy) => (
         <ul
           key={copy}
@@ -39,7 +40,7 @@ function TechMarquee({ items }: { items: string[] }) {
                 name={name}
                 className="size-7 text-faint transition-colors duration-300 group-hover/m:[color:var(--brand)]"
               />
-              <span className="font-serif text-2xl text-muted">{name}</span>
+              <span className="font-display text-2xl font-medium text-muted">{name}</span>
             </li>
           ))}
         </ul>
@@ -52,16 +53,24 @@ export function Skills() {
   const allSkills = skills.flatMap((group) => group.items);
 
   return (
-    <section aria-label="Skills and tools" className="section border-t border-border">
+    <section id="skills" className="section border-t border-border">
+      <div className="container-x">
+        <SectionHeading
+          index="03"
+          label="Stack"
+          title={
+            <>
+              Tech <span className="serif-italic text-metallic-orange">Stack.</span>
+            </>
+          }
+          intro="The languages, frameworks, and tools I work with most."
+        />
+      </div>
+
       <TechMarquee items={allSkills} />
 
-      <div className="container-x mt-16">
-        <Reveal className="flex items-center gap-3">
-          <span className="label">Toolbox</span>
-          <span className="h-px w-10 bg-border-strong" aria-hidden />
-        </Reveal>
-
-        <div className="mt-10 divide-y divide-border border-y border-border">
+      <div className="container-x mt-14">
+        <div className="divide-y divide-border border-y border-border">
           {skills.map((group, i) => (
             <Reveal
               key={group.label}

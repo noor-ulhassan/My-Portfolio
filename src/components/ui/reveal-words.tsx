@@ -8,6 +8,10 @@ type RevealWordsProps = {
   text: string;
   as?: MotionTagName;
   className?: string;
+  /** Applied to each animated word span — e.g. `.text-metallic` so the
+   *  background-clip gradient is computed per word (robust through the
+   *  overflow-hidden descender masks below). */
+  wordClassName?: string;
   /** Stagger between words, in seconds. */
   stagger?: number;
   delay?: number;
@@ -18,6 +22,7 @@ export function RevealWords({
   text,
   as = "span",
   className,
+  wordClassName,
   stagger = 0.06,
   delay = 0,
 }: RevealWordsProps) {
@@ -45,7 +50,7 @@ export function RevealWords({
           className="inline-block overflow-hidden align-bottom pb-[0.18em] -mb-[0.18em]"
         >
           <motion.span
-            className="inline-block"
+            className={cn("inline-block", wordClassName)}
             aria-hidden
             variants={{
               hidden: { y: "110%" },
