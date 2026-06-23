@@ -21,7 +21,7 @@ export const profile = {
   available: true,
   email: "noorulhassan01.dev@gmail.com",
   /** Put your resume PDF in /public and point here. */
-  resumeUrl: "/noor-ul-hassan-resume.pdf",
+  resumeUrl: "/noor-ul-hassan.pdf",
 } as const;
 
 export type SocialLink = {
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     links: { live: "https://example.com", repo: "https://github.com/your-handle/ledgerly" },
     featured: true,
   },
-  {
+ /* {
     title: "Convo",
     meta: "Realtime app · 2023",
     description:
@@ -106,10 +106,10 @@ export const projects: Project[] = [
     ],
     tech: ["Next.js", "ClickHouse", "D3", "Docker"],
     links: { live: "https://example.com", repo: "https://github.com/your-handle/pulse" },
-  },
+  },*/
 ];
 
-/* --------------------------------------------------------------------------- */
+
 
 export type SkillGroup = { label: string; items: string[] };
 
@@ -144,31 +144,31 @@ export const journey: JourneyEntry[] = [
     year: "2023",
     title: "Found the web",
     description:
-      "Started teaching myself web development, and it quickly became the thing I most enjoyed building.",
+      "Started learning web development on my own — and found the thing I actually loved building.",
   },
   {
     year: "2024",
     title: "Became a MERN developer",
     description:
-      "Got comfortable with React, Node, Express, and MongoDB, and built complete apps with them.",
+      "Went deep on React, Node, Express & MongoDB, shipping full-stack apps end to end.",
   },
   {
     year: "2025",
-    title: "Explored AI",
+    title: "Explored applied AI",
     description:
-      "Built EduQuest — a learning app with an AI tutor and live coding challenges.",
+      "Built EduQuest — combining RAG pipelines and real-time systems with a modern web stack.",
   },
   {
     year: "2026",
     title: "Learned to ship",
     description:
-      "Picked up Docker, deployment, and the cloud, so I can take a project from my laptop to a live site.",
+      "Picked up Docker, cloud, and deployment — taking projects from idea to production.",
   },
   {
     year: "Next",
     title: "Keep building",
     description:
-      "Looking for a role where I can keep building real products and learn from a strong team.",
+      "Ready to bring real value to an ambitious team — shipping production software and turning hard problems into reliable products.",
     current: true,
   },
 ];

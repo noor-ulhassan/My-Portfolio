@@ -130,7 +130,7 @@ export function SiteNav() {
           <div className="flex items-center gap-2">
             <a
               href={profile.resumeUrl}
-              download
+              download="noor-ul-hassan.pdf"
               className="link-underline hidden text-sm text-accent transition-colors hover:text-accent-soft sm:inline-block"
             >
               Resume
@@ -201,7 +201,7 @@ export function SiteNav() {
               >
                 <a
                   href={profile.resumeUrl}
-                  download
+                  download="Noor ul Hassan.pdf"
                   onClick={closeMenu}
                   className="flex items-baseline gap-4 py-3 font-display text-5xl font-semibold tracking-tight text-accent transition-colors hover:text-accent-soft"
                 >

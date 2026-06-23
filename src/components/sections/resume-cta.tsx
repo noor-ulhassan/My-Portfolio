@@ -27,7 +27,7 @@ export function ResumeCta() {
               <ActionLink
                 href={profile.resumeUrl}
                 variant="primary"
-                download
+                download="noor-ul-hassan.pdf"
                 arrow={false}
                 className="px-7 py-3.5 text-base"
               >
