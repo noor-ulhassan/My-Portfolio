@@ -1,0 +1,894 @@
+{
+  "meta": {
+    "siteUrl": "https://www.justaditya.com/",
+    "calendarUrl": "https://cal.com/adi-patil/30min",
+    "email": "adityapatil24680@gmail.com"
+  },
+  "socials": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/PythonHacker24",
+      "icon": "github"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/aditya-patil-260a631b2/",
+      "icon": "linkedin"
+    },
+    {
+      "label": "X",
+      "href": "https://x.com/firecaffeine",
+      "icon": "x"
+    },
+    {
+      "label": "YouTube",
+      "href": "https://youtube.com/@theracecondition",
+      "icon": "youtube"
+    },
+    {
+      "label": "Discord",
+      "href": "https://discord.gg/ry4YCJaShK",
+      "icon": "discord"
+    },
+    {
+      "label": "Medium",
+      "href": "https://medium.com/@adityapatil24680",
+      "icon": "medium"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/loves_coffeex/",
+      "icon": "instagram"
+    }
+  ],
+  "posts": [
+    {
+      "slug": "consumer-design",
+      "kicker": "Essay",
+      "title": "Thoughtful Design for Consumer Apps",
+      "description": "Consumer products are judged before they are used. Good design is not decoration, it is the removal of effort.",
+      "date": "2026-07-04",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "I keep coming back to the design of Wabi, and not because of the product itself."
+        },
+        {
+          "type": "p",
+          "text": "When I first saw it, I had no interest in using it. I do not need an app builder. But the design still gave me two strong signals. It felt refined, not like an experiment or an unfinished MVP. And it looked effortless, like I would not have to spend any mental energy figuring it out."
+        },
+        {
+          "type": "p",
+          "text": "Those two signals made trying it feel like a decision with nothing to lose. That is when I realized the real lesson was not about design. It was about consumer products."
+        },
+        {
+          "type": "h2",
+          "text": "The promise a product makes"
+        },
+        {
+          "type": "p",
+          "text": "A consumer product makes a promise the moment someone sees it. Before people understand the technology or experience the value, they judge whether it feels worth trying."
+        },
+        {
+          "type": "p",
+          "text": "This is where consumer products differ from B2B. People say design does not matter while you are proving a concept, and in B2B that advice mostly works. Users tolerate friction when the underlying technology solves an important problem. Consumer products get no such patience. Perception is part of the product, and if something feels complicated, people leave before they ever discover the value."
+        },
+        {
+          "type": "h2",
+          "text": "Good design reduces effort"
+        },
+        {
+          "type": "p",
+          "text": "Good consumer design is not about making everything beautiful. It is not gradients, animations, or visual effects."
+        },
+        {
+          "type": "p",
+          "text": "It is about reducing effort."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Few colors and few buttons.",
+            "Clear hierarchy.",
+            "Visuals that earn their place.",
+            "An interface that quietly says: you do not have to think, just start."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The best consumer products feel almost agentic. They give the impression that the product will do the work while you simply guide it."
+        },
+        {
+          "type": "h2",
+          "text": "Why this matters more now"
+        },
+        {
+          "type": "p",
+          "text": "AI products compete for attention every day. Someone scrolling Instagram or TikTok has a few seconds to decide whether an app is worth downloading. A powerful result paired with a clean, minimal interface reads as easy to use, and that perception alone lowers the barrier to trying it."
+        },
+        {
+          "type": "p",
+          "text": "People rarely separate design from capability. A simple interface makes a product feel more capable because it makes the work ahead feel smaller."
+        },
+        {
+          "type": "p",
+          "text": "So the lesson is not that every product should look beautiful. It is that every element should earn its place, every interaction should reduce cognitive effort, and getting started should feel like the easiest decision a user can make."
+        }
+      ]
+    },
+    {
+      "slug": "learning-to-code-has-changed",
+      "kicker": "Essay",
+      "title": "Learning to Code Has Changed",
+      "description": "Most programming advice online predates AI. Here's how I'd start learning to code today, and why understanding the fundamentals still matters.",
+      "date": "2026-07-03",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "One thing that surprises me is that most programming advice on the internet was created before AI became a part of everyday development."
+        },
+        {
+          "type": "p",
+          "text": "That does not mean the advice is bad. In fact, a lot of it is still valuable. But the way we learn and write software has changed so much that beginners should approach it differently today."
+        },
+        {
+          "type": "h2",
+          "text": "How it was when I started"
+        },
+        {
+          "type": "p",
+          "text": "I started taking coding seriously in 2022 during college."
+        },
+        {
+          "type": "p",
+          "text": "At that time, ChatGPT either did not exist or had not become popular yet. AI was not something developers relied on every day."
+        },
+        {
+          "type": "p",
+          "text": "Writing software was a very manual process."
+        },
+        {
+          "type": "p",
+          "text": "Even building a small feature took time because you had to write almost everything yourself. Back then, writing 200 to 300 lines of code in a day felt like a productive day. Today, AI can generate thousands of lines in a few minutes. The number of lines does not matter, but the speed of development has changed completely."
+        },
+        {
+          "type": "p",
+          "text": "I also remember how much time we spent searching for things."
+        },
+        {
+          "type": "p",
+          "text": "If I needed an encryption library, I would:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Search for it on Google.",
+            "Compare different libraries.",
+            "Read documentation.",
+            "Figure out which one was the standard choice.",
+            "Learn how to use it before writing any code."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "That was simply how software development worked."
+        },
+        {
+          "type": "p",
+          "text": "Now, AI can usually suggest the right library, explain why it is a good choice, and even generate the implementation. Looking back, it almost feels funny how much time we spent doing things that now happen in seconds."
+        },
+        {
+          "type": "h2",
+          "text": "What has changed"
+        },
+        {
+          "type": "p",
+          "text": "The biggest change is not that AI writes code."
+        },
+        {
+          "type": "p",
+          "text": "The biggest change is that AI has become an excellent teacher and assistant."
+        },
+        {
+          "type": "p",
+          "text": "Instead of spending hours searching through documentation or watching long tutorials, you can ask questions whenever you get stuck."
+        },
+        {
+          "type": "p",
+          "text": "You can learn much faster because you have someone available to explain concepts, give examples, and answer follow-up questions instantly."
+        },
+        {
+          "type": "h2",
+          "text": "How I would learn today"
+        },
+        {
+          "type": "p",
+          "text": "If I were starting from scratch again, I would follow a very different approach."
+        },
+        {
+          "type": "p",
+          "text": "**1. Learn the fundamentals quickly.** First, I would learn the basics of one programming language. Use tools like ChatGPT, Claude, or Grok to understand concepts faster. Ask as many questions as you want. Experiment with examples. Build small programs until the syntax starts feeling natural. The goal is not to memorize everything. The goal is to understand how programming works."
+        },
+        {
+          "type": "p",
+          "text": "**2. Start building immediately.** Once you understand the basics, stop spending months consuming tutorials. Start building projects. This is where the real learning happens."
+        },
+        {
+          "type": "p",
+          "text": "**3. Let AI write code with you.** As soon as you are comfortable reading code, start using AI to generate parts of your projects. Do not think of AI as something that replaces learning. Think of it as a very fast teammate. Generate code, review it carefully, understand why it works, make changes, and keep moving."
+        },
+        {
+          "type": "h2",
+          "text": "Do you still need to learn programming?"
+        },
+        {
+          "type": "p",
+          "text": "This is probably the biggest debate today."
+        },
+        {
+          "type": "p",
+          "text": "Many people will still tell you that you need to know programming deeply."
+        },
+        {
+          "type": "p",
+          "text": "I agree, but maybe not in the same way as before."
+        },
+        {
+          "type": "p",
+          "text": "AI can already do a huge amount of the typing for you. It can generate functions, fix bugs, write tests, and even build complete features."
+        },
+        {
+          "type": "p",
+          "text": "But AI is not responsible for the final product."
+        },
+        {
+          "type": "p",
+          "text": "You are."
+        },
+        {
+          "type": "p",
+          "text": "Someone still has to review the code, understand the architecture, catch mistakes, and decide whether the solution actually makes sense. That requires understanding the fundamentals."
+        },
+        {
+          "type": "p",
+          "text": "You do not need to memorize every API or every library anymore. You do need enough knowledge to judge whether the AI is doing the right thing."
+        },
+        {
+          "type": "h2",
+          "text": "My advice"
+        },
+        {
+          "type": "p",
+          "text": "If I were beginning today, I would:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Learn one programming language as quickly as possible using AI.",
+            "Understand the core concepts instead of memorizing syntax.",
+            "Start building real projects early.",
+            "Use AI agents to speed up development.",
+            "Always review and understand the code before accepting it."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The developers who learn fastest today are not the ones who avoid AI."
+        },
+        {
+          "type": "p",
+          "text": "They are the ones who understand enough to work with AI effectively."
+        },
+        {
+          "type": "p",
+          "text": "That is the biggest difference between learning to code a few years ago and learning to code today."
+        }
+      ]
+    },
+    {
+      "slug": "thinking-before-building",
+      "kicker": "Essay",
+      "title": "Thinking Before Building",
+      "description": "A startup hackathon taught me that clarity beats speed \u2014 execution without direction just moves you faster in the wrong direction.",
+      "date": "2026-07-03",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "One of the biggest lessons I learned in college did not come from a classroom or while writing code. It came from a startup hackathon in Bengaluru."
+        },
+        {
+          "type": "p",
+          "text": "During the summer after my third year, I was working as a Google Summer of Code contributor when I got invited to an in-person startup hackathon. The goal was very different from a normal hackathon. It was designed to simulate the early days of a startup. You had to find a co-founder, work together for 24 hours, and pitch a product the next day. It was less about building software and more about how you think."
+        },
+        {
+          "type": "p",
+          "text": "As soon as the event started, the room became chaotic. Everyone was pitching ideas, switching teammates, talking to mentors, and trying to build something as quickly as possible. The atmosphere made it feel like every minute mattered."
+        },
+        {
+          "type": "p",
+          "text": "I teamed up with someone who was surprisingly calm. While everyone else rushed to build, we spent hours just talking. We discussed the future, different markets, and possible ideas. We walked outside the venue, kept asking questions, and challenged our assumptions. We had not written a single line of code."
+        },
+        {
+          "type": "p",
+          "text": "At one point, he said something that completely changed the way I think."
+        },
+        {
+          "type": "p",
+          "text": "**\"We have 24 hours. We are engineers. We can build the product in the last hour if we know exactly what we want to build. We should spend most of our time thinking.\"**"
+        },
+        {
+          "type": "p",
+          "text": "That sentence stayed with me."
+        },
+        {
+          "type": "p",
+          "text": "Everyone else was reacting to the pressure around them. We chose to ignore the noise and focus on understanding the problem first. We talked to mentors, changed our ideas multiple times, and kept refining our thinking instead of rushing into execution."
+        },
+        {
+          "type": "p",
+          "text": "That experience taught me that clarity is often more valuable than speed. Before doing anything, understand the rules of the game. Ask whether the pressure is real or whether you are simply following the crowd. Once you understand the situation, trust yourself enough to think independently."
+        },
+        {
+          "type": "p",
+          "text": "As engineers, we often believe that execution is everything. But execution without direction only makes you move faster in the wrong direction. Good thinking is what gives execution its value."
+        },
+        {
+          "type": "p",
+          "text": "Looking back, that hackathon was the first time I moved beyond the mindset of simply building things. It taught me to slow down, think clearly, and make decisions with intention."
+        },
+        {
+          "type": "p",
+          "text": "The next day, we presented our idea, and both of us were selected. Of course, getting selected felt great, but that was not the biggest win. The real reward was learning a way of thinking that has stayed with me ever since."
+        }
+      ]
+    },
+    {
+      "slug": "starter-advice",
+      "kicker": "Essay",
+      "title": "The Advice I Wish Someone Gave Me in My First Year of College",
+      "description": "A builder's path into software engineering: what I would do if I started college again today.",
+      "date": "2025-01-01",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "If you're starting college and want to become a software engineer, the first thing I want you to know is this:"
+        },
+        {
+          "type": "p",
+          "text": "**Your branch does not decide your future.**"
+        },
+        {
+          "type": "p",
+          "text": "I'm from Electrical Engineering, and today I work as a software engineer. I have seen people from Civil, Mechanical, Chemical, and many other branches become amazing developers. Being in Computer Science definitely helps because many of the concepts you study are useful in software engineering. But today, almost everything can be learned online. Your skills will matter much more than your degree."
+        },
+        {
+          "type": "p",
+          "text": "I believe there are two different paths into software engineering."
+        },
+        {
+          "type": "p",
+          "text": "The first path is the traditional one. You focus on Data Structures and Algorithms (DSA), maintain a good CGPA, prepare for coding interviews, and eventually learn system design. This is a great path that has helped thousands of people build successful careers in top companies. If this is your goal, there are already many excellent resources available that explain it much better than I can."
+        },
+        {
+          "type": "p",
+          "text": "This article is for people who want to become builders."
+        },
+        {
+          "type": "p",
+          "text": "If you enjoy creating products, experimenting with ideas, working at startups, or even building your own company someday, then this path might be a better fit for you."
+        },
+        {
+          "type": "p",
+          "text": "My own journey started in my first year of college. I built projects that were honestly not very good, but every project taught me something new. Later, I joined a startup as an intern, contributed to Google Summer of Code, tried building my own startup, got my first customers, and eventually joined a YC-backed startup as a software engineer. None of these opportunities came because I solved hundreds of coding questions. They came because I kept building."
+        },
+        {
+          "type": "p",
+          "text": "If I had to start again today, this is what I would do."
+        },
+        {
+          "type": "h2",
+          "text": "1. Understand what is happening in technology"
+        },
+        {
+          "type": "p",
+          "text": "Every few years, a new field creates exciting opportunities. Right now, AI and AI agents are changing the industry. A few years ago, it was Web3. A few years from now, it will probably be something else."
+        },
+        {
+          "type": "p",
+          "text": "Instead of asking, \"Which programming language should I learn?\", first ask, \"What is changing in the world?\""
+        },
+        {
+          "type": "p",
+          "text": "Learn about the technology at a high level before writing code. Watch product demos, read blogs, understand use cases, and see how people are using it to solve real problems."
+        },
+        {
+          "type": "h2",
+          "text": "2. Choose technologies based on your interests"
+        },
+        {
+          "type": "p",
+          "text": "Once you understand an industry, choosing technologies becomes much easier."
+        },
+        {
+          "type": "p",
+          "text": "For example:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Interested in AI? Learn Python.",
+            "Interested in web products? Learn JavaScript or TypeScript.",
+            "Interested in backend systems? Learn databases, APIs, and system design concepts."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Do not follow random roadmaps just because someone else recommends them. Build your own roadmap based on what excites you."
+        },
+        {
+          "type": "h2",
+          "text": "3. Learn full stack development"
+        },
+        {
+          "type": "p",
+          "text": "I still recommend learning full stack development because it teaches you how complete products are built."
+        },
+        {
+          "type": "p",
+          "text": "Frontend has become much easier with AI tools, but understanding backend systems is still extremely valuable. Learn about databases, APIs, authentication, servers, and how different parts of an application work together. These concepts will stay useful no matter how technology changes."
+        },
+        {
+          "type": "h2",
+          "text": "4. Start building as early as possible"
+        },
+        {
+          "type": "p",
+          "text": "The biggest mistake students make is waiting until they feel ready."
+        },
+        {
+          "type": "p",
+          "text": "You do not need to wait."
+        },
+        {
+          "type": "p",
+          "text": "Write code in your first year. Build projects during your first semester. They will not be perfect, and that is completely fine. Every project will teach you something that no tutorial ever can."
+        },
+        {
+          "type": "h2",
+          "text": "5. Use AI, but understand what it is doing"
+        },
+        {
+          "type": "p",
+          "text": "AI is an incredible learning tool."
+        },
+        {
+          "type": "p",
+          "text": "Use it to write code, explain concepts, and help you build projects faster. But do not blindly copy everything it generates. Read the code, understand it, modify it, and experiment with it. The goal is to learn, not just to finish projects quickly."
+        },
+        {
+          "type": "h2",
+          "text": "6. Work with startups if you get the opportunity"
+        },
+        {
+          "type": "p",
+          "text": "Startups teach you things that are difficult to learn anywhere else."
+        },
+        {
+          "type": "p",
+          "text": "You get real responsibility, work on meaningful problems, and learn much faster because every day brings a new challenge. It is not the easiest path, but it is one of the fastest ways to grow as an engineer."
+        },
+        {
+          "type": "p",
+          "text": "Finally, remember that college gives you something you will never have again: time to experiment."
+        },
+        {
+          "type": "p",
+          "text": "Use these four years to explore different ideas, build projects, contribute to open source, launch products, and maybe even earn your first revenue. You do not have to build something perfect. You just have to keep building."
+        },
+        {
+          "type": "p",
+          "text": "Four years is enough time to completely change your life if you use it well."
+        },
+        {
+          "type": "p",
+          "text": "So start today. Pick something that excites you, write your first line of code, and keep building."
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "data": {
+        "image": "/me.png",
+        "name": "Noor ul Hassan",
+        "phonetic": "/no\u0259r \u028al \u02c8h\u0283s\u0259n/",
+        "noun": "noun",
+        "timezone": {
+          "label": "PKT",
+          "tz": "Asia/Karachi"
+        },
+        "intro": [
+          "a full-stack developer and [product builder](https://en.wikipedia.org/wiki/Product_design) with deep experience across engineering, product strategy, and user-centric design.",
+          "a [polymath](https://en.wikipedia.org/wiki/Polymath) who bridges technical architecture with business outcomes to create impactful, scalable solutions."
+        ]
+      }
+    },
+    {
+      "type": "experience",
+      "title": "Experience",
+      "data": {
+        "featured": {
+          "name": "Remix (YC W26)",
+          "link": "https://www.ycombinator.com/companies/resonate",
+          "logo": "https://remix.re/app-icon.png",
+          "role": "Software Engineer, San Francisco, CA",
+          "dateRange": "February 2026 - Present",
+          "collapsedHeight": "max-h-48",
+          "body": [
+            "As an early software engineer bridging product strategy and technical execution, I am driving the development of an AI-native messaging platform from zero to one.",
+            "Key focus areas include:",
+            {
+              "list": [
+                "Architecting and building core product features for an AI-focused messaging ecosystem.",
+                "Developing real-time systems and innovating ways to transform and present information dynamically within messaging interfaces.",
+                "Collaborating within a lean team to build robust tools for AI-driven communication.",
+                "Operating top-to-bottom, from product conception to complete software development."
+              ]
+            },
+            "Transitioning into this founding-level role has been an incredibly rewarding next step following my previous startup ventures."
+          ]
+        },
+        "previousLabel": "Previously",
+        "previous": [
+          {
+            "name": "Entrepreneur First",
+            "role": "Founder in Residence",
+            "location": "Bengaluru",
+            "link": "https://www.joinef.com/",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/9/95/Entrepreneurs_First_Logo.png",
+            "body": [
+              "As a Founder in Residence at Entrepreneurs First (EF), a premier global talent investor and startup accelerator, I was immersed in designing and developing cutting-edge Agentic AI systems.",
+              "Built autonomous, goal-driven AI agents that shifted from suggestion-based tools to proactive execution, enabling seamless human-AI collaboration and redefining task automation and decision-making.",
+              "Drove a bold vision for the future of computing: making traditional web browsing obsolete, turning personal data into the primary interface, and empowering agentic systems to independently handle complex responsibilities.",
+              "Operated in a high-intensity environment surrounded by world-class cofounders, mentors, and resources, using EF's structured support to explore, validate, and iterate on ideas at pace.",
+              "Positioned at the forefront of a paradigm shift in AI, tackling hard technical and conceptual challenges to create meaningful, scalable impact in the emerging agentic era."
+            ]
+          },
+          {
+            "name": "Google Summer of Code 2025",
+            "role": "Emory University",
+            "location": "Atlanta, USA",
+            "link": "https://minimalistbook.com/gsoc-final-report-2025/",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xHRLRVUxrSQ9cZ0T4CLQ6aI4NI62iCHO4An0lLXgUw&s=10",
+            "body": [
+              "Designed and developed a comprehensive system for managing Access Control List (ACL) permissions across multiple Linux file system servers, including NFS and BeeGFS, demonstrating expertise in large-scale distributed systems and secure file management.",
+              "Built a robust backend capable of processing millions of permission change requests, showcasing proficiency in high-performance computing and scalability.",
+              "Implemented two Linux systemd daemons communicating via Unix sockets: one for gRPC-based backend interactions and another for executing ACL changes, highlighting skills in daemon development, inter-process communication, and system-level programming.",
+              "Created a user-friendly Next.js frontend enabling secure login, backend communication, and scheduling of permission requests, illustrating full-stack development capabilities and focus on intuitive user experiences."
+            ]
+          },
+          {
+            "name": "Professional Freelancer (Technical GTM)",
+            "role": "Technical Writer",
+            "location": "Tel Aviv, Israel",
+            "link": "https://www.upwork.com/freelancers/~0172a072394ece49bb?viewMode=1",
+            "logo": "https://play-lh.googleusercontent.com/OtMKLcIcl_wNIhmuXUZT0L72ysVsdekDomOnhIjqAppwqix3wl3iniGGE9xY8AKEqhN9",
+            "body": [
+              "Authored comprehensive, highly technical documentation (50+ pages) for a Software Composition Analysis (SCA) tool, including detailed guides on advanced features such as reachability analysis - focusing on identifying truly exploitable vulnerabilities in open-source dependencies to reduce noise and prioritize remediation in secure software development lifecycles.",
+              "Ghostwrote in-depth content on Reachability Analysis for the CTO of a security company, explaining how it enhances SCA by determining whether detected vulnerabilities are actually reachable and exploitable in the application's codebase - delivering clear, authoritative thought leadership material suitable for blogs, whitepapers, or technical marketing.",
+              "Deployed and configured Flipt (an open-source, Git-native feature flagging platform) on cloud infrastructure to support video production workflows for a feature flagging provider; troubleshot and resolved operational issues to ensure reliable, production-ready performance in a dynamic environment.",
+              "Developed custom scraping tools for a proxy provider targeting real estate platforms, enabling efficient data extraction while adhering to technical and ethical constraints; rapidly produced high-quality articles and technical write-ups on the tools, scraping methodologies, and platform integrations to support knowledge sharing and client deliverables."
+            ]
+          },
+          {
+            "name": "Engineering Intern",
+            "role": "Athena Consulting Ltd.",
+            "location": "Dubai",
+            "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQF9MMIpP3ksYQ/company-logo_200_200/company-logo_200_200/0/1672242362219/athenaconsulting1_logo?e=1784160000&v=beta&t=_HTwTwnR9MGd3H2HltAtz_z2BwLEzQsO8WhysZ45Cqo",
+            "body": [
+              "Led the complete system design and deployment architecture for Eumlet, a UAE-based B2B Web3 payments and financial platform (built on Next.js), on AWS infrastructure. Configured Debian EC2 instances, Application Load Balancer (ALB), and NGINX reverse proxy under senior guidance - ensuring high availability, scalability, and secure handling of financial transactions in a regulated environment.",
+              "Engineered automated CI/CD pipelines using GitHub Actions for seamless build, test, and deployment workflows, with direct integration and manual orchestration to EC2 targets - demonstrating strong expertise in modern DevOps practices, infrastructure as code principles, and zero-downtime deployments for production fintech applications.",
+              "Managed a team of 4 developers while simultaneously supporting two high-value clients: Lunarspace and Concordium (a privacy-focused Layer-1 blockchain platform) - balancing tight deadlines, client expectations, and resource constraints in a fast-paced environment. Authored comprehensive legal and technical developer handbooks to standardize onboarding, compliance, and best practices for new recruits.",
+              "Collaborated remotely with BGTrade (China-based financial platform team) on global security audits and production deployments of sensitive financial systems - coordinating across time zones and cultures to identify vulnerabilities, implement hardening measures, and ensure secure, compliant rollouts in cross-border fintech ecosystems."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "techStack",
+      "title": "Generalist by Heart, Specialist by Profession",
+      "data": {
+        "categories": [
+          {
+            "name": "Languages",
+            "skills": [
+      
+              {
+                "name": "TypeScript",
+                "slug": "typescript"
+              },
+              {
+                "name": "JavaScript",
+                "slug": "javascript"
+              }
+   
+            ]
+          },
+          {
+            "name": "Frontend",
+            "skills": [
+              {
+                "name": "React",
+                "slug": "react"
+              },
+              {
+                "name": "Next.js",
+                "slug": "nextdotjs"
+              },
+              {
+                "name": "Tailwind CSS",
+                "slug": "tailwindcss"
+              },
+              {
+                "name": "Shadcn UI",
+                "slug": "shadcnui"
+              },
+              {
+                "name": "Framer Motion",
+                "slug": "framer"
+              }
+            ]
+          },
+          {
+            "name": "Backend & DB",
+            "skills": [
+       
+              {
+                "name": "Node.js",
+                "slug": "nodedotjs"
+              },
+              {
+                "name": "PostgreSQL",
+                "slug": "postgresql"
+              },
+              {
+                "name": "MongoDB",
+                "slug": "mongodb"
+              },
+              {
+                "name": "Redis",
+                "slug": "redis"
+              },
+              {
+                "name": "FireBase",
+                "slug": "firebase"
+              }
+            ]
+          },
+          {
+            "name": "Infra & Tools",
+            "skills": [
+              {
+                "name": "Docker",
+                "slug": "docker"
+              },
+              {
+                "name": "Google Cloud",
+                "slug": "googlecloud"
+              },
+              {
+                "name": "Vercel",
+                "slug": "vercel"
+              },
+              {
+                "name": "Git",
+                "slug": "git"
+              },
+              {
+                "name": "GitHub",
+                "slug": "github"
+              },
+              {
+                "name": "Linux",
+                "slug": "linux"
+              },
+              {
+                "name": "Nginx",
+                "slug": "nginx"
+              }
+            ]
+          },
+          {
+            "name": "AI & ML",
+            "skills": [
+              {
+                "name": "Hugging Face",
+                "slug": "huggingface"
+              },
+              {
+                "name": "PyTorch",
+                "slug": "pytorch"
+              },
+              {
+                "name": "Pandas",
+                "slug": "pandas"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "expandableCard",
+      "title": "In Between These Experiences",
+      "data": {
+        "heading": "The Product Building Journey",
+        "collapsedHeight": "max-h-48",
+        "body": [
+          "I've been building and experimenting on the product side for a long time. Each previous product always feels naive in hindsight, but looking back, I can see they were incrementally better, each iteration teaching me something new about users, infrastructure, and what it takes to build something people actually want.",
+          "It started with **MetaWiper** during my sophomore year, a tool that cleaned image metadata. No one would use it, but I was proud. It was my first real attempt at shipping something complete.",
+          "Next came **Stockic**, a news app where I spent months doing serious infrastructure work. This was where I learned to build systems that could scale, not just features that looked good.",
+          "Then I worked on **Gloss Card**, and for the first time, a customer actually wanted to buy it for their product. That validation, knowing someone saw enough value to pay, was a turning point.",
+          "After that, I built **NeuraLeap**, where I had the most meaningful user interactions yet, HRs from established firms. I worked on data pipelines capable of handling 50 million LinkedIn profiles and processing them with AI. The scale was different, the stakes were higher, and the technical challenges forced me to level up.",
+          "Most recently, I worked on **Meteor**, an AI SEO toolkit at Entrepreneurs First. This time, my product was being used by 6 YC-backed companies. Real users. Real traction. Real feedback loops.",
+          "**So yes, hard work and consistency pay off. Each product was a step forward, even when it didn't feel like it at the time.**"
+        ]
+      }
+    },
+    {
+      "type": "project",
+      "title": "Coolest Experiment with Consumer Tech",
+      "data": {
+        "name": "EduQuest",
+        "link": "https://www.doubledart.fun/",
+        "subtitle": "Anonymous crush matching for NIT Hamirpur, Class of 2026",
+        "image": "/doubledart-logo.svg",
+        "cardImage": "/doubledart-illustration.png",
+        "body": [
+          "a 3-day social experiment i shipped with a batchmate: graduating students anonymously dart the people they noticed over four years. a crush stays sealed forever unless it is mutual, and only then are both names revealed.",
+          "built lean on Supabase and Vercel with college-email Google sign-in. no ops team, no data hoarding, the database was destroyed after the event and only anonymized stats remain."
+        ],
+        "stats": [
+          {
+            "value": "201",
+            "label": "sign-ups in 3 days"
+          },
+          {
+            "value": "238",
+            "label": "crushes sent"
+          },
+          {
+            "value": "11",
+            "label": "mutual pairs matched"
+          },
+          {
+            "value": "766",
+            "label": "unique visitors"
+          },
+          {
+            "value": "80.7K",
+            "label": "Supabase requests"
+          },
+          {
+            "value": "3.2K",
+            "label": "page views"
+          },
+          {
+            "value": "85%",
+            "label": "mobile traffic"
+          },
+          {
+            "value": "9.2%",
+            "label": "crushes reciprocated"
+          }
+        ],
+        "footerLink": {
+          "label": "Read the full case study",
+          "url": "https://www.doubledart.fun/case-study"
+        }
+      }
+    },
+    {
+      "type": "thoughts",
+      "title": "Thinking",
+      "data": {
+        "count": 3,
+        "viewAllLabel": "View more",
+        "viewAllHref": "/thoughts"
+      }
+    },
+    {
+      "type": "youtube",
+      "title": "My YouTube Channel",
+      "data": {
+        "image": "/youtube-profile.png",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png",
+        "name": "Aditya's YouTube Channel",
+        "url": "https://www.youtube.com/@theracecondition",
+        "tagline": "where i break down complex systems and engineering ideas",
+        "community": {
+          "url": "https://discord.gg/ry4YCJaShK",
+          "count": "300+ members",
+          "text": "driven into the Discord community"
+        },
+        "videos": [
+          {
+            "title": "System Design: Building Dropbox",
+            "url": "https://www.youtube.com/watch?v=6Bkvdyb3pvs"
+          },
+          {
+            "title": "System Design: Building Spotify",
+            "url": "https://www.youtube.com/watch?v=m84tBP_4DWE"
+          },
+          {
+            "title": "Understanding REST APIs for System Design",
+            "url": "https://www.youtube.com/watch?v=-btg5UuI6dw"
+          },
+          {
+            "title": "Top 5 Programming Languages for 2026",
+            "url": "https://www.youtube.com/watch?v=lJXq8o6o0jY"
+          },
+          {
+            "title": "Reviewing my 47 Pages GSoC Proposal",
+            "url": "https://www.youtube.com/watch?v=6HOlwQxgqDs"
+          }
+        ],
+        "footerLink": {
+          "label": "and much more on the channel",
+          "url": "https://www.youtube.com/@theracecondition/videos"
+        }
+      }
+    },
+    {
+      "type": "education",
+      "title": "Education",
+      "data": {
+        "items": [
+          {
+            "title": "University of Sargodha",
+            "role": "BS Software Engineering",
+            "logo": "data:image/jpeg;base64,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",
+            "body": [
+              "2022 - Surviving"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "github",
+      "title": "GitHub Contributions",
+      "data": {
+        "username": "noor-ulhassan"
+      }
+    },
+
+
+    {
+      "type": "contact",
+      "title": "Get in Touch",
+      "data": {
+        "heading": "Let's build something together",
+        "subheading": "open to opportunities, collaborations, and good conversations. book a slot on my calendar or drop me a line.",
+        "ctas": [
+          {
+            "label": "Schedule a meeting",
+            "href": "https://cal.com/adi-patil/30min",
+            "icon": "calendar",
+            "primary": true
+          },
+          {
+            "label": "Email me",
+            "href": "mailto:noorulhassan01.dev@gmail.com",
+            "icon": "mail",
+            "primary": false
+          }
+        ],
+        "socialsLabel": "Find me on",
+        "image": "/walking-thinking.png"
+      }
+    }
+  ]
+}
