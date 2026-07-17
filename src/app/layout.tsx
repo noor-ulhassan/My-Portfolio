@@ -1,89 +1,50 @@
 import type { Metadata } from "next";
-import { Fraunces, Hanken_Grotesk, JetBrains_Mono, Geist } from "next/font/google";
+import { DM_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { SmoothScroll } from "@/components/smooth-scroll";
-import { profile } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { ThemeProvider } from "./providers";
+import portfolio from "./data/portfolio.json";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
-
-const fraunces = Fraunces({
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
-  style: ["normal", "italic"],
-});
-
-const hanken = Hanken_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-hanken",
-  display: "swap",
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jb",
-  display: "swap",
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
-  title: {
-    default: `${profile.name} — ${profile.role}`,
-    template: `%s — ${profile.name}`,
-  },
-  description: profile.summary,
-  keywords: [
-    profile.name,
-    "Software Engineer",
-    "MERN Stack",
-    "Next.js",
-    "Full-Stack Developer",
-    "React",
-  ],
-  authors: [{ name: profile.name }],
-  creator: profile.name,
+  metadataBase: new URL(portfolio.meta.siteUrl),
+  title: "Noor ul Hassan",
+  description: "All about me",
   openGraph: {
-    title: `${profile.name} — ${profile.role}`,
-    description: profile.tagline,
+    title: "Noor ul Hassan",
+    description: "Explore Noor's World",
+    url: "/",
+    siteName: "Noor ul Hassan",
     type: "website",
-    locale: "en_US",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Explore Noor's World" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} — ${profile.role}`,
-    description: profile.tagline,
+    title: "Noor ul Hassan",
+    description: "Explore Noor's World",
+    images: ["/og.png"],
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn(
-        "h-full",
-        fraunces.variable,
-        hanken.variable,
-        jetbrains.variable,
-        geist.variable,
-        "font-sans",
-      )}
-    >
-      <body className="grain min-h-full antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          forcedTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
-          <SmoothScroll />
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${dmSans.variable} antialiased transition-colors duration-300`}
+      >
+        <ThemeProvider>
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

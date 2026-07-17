@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Youtube, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { FaYoutube as Youtube } from "react-icons/fa6";
 import { SectionShell } from "../SectionShell";
 import { DiscordIcon } from "../icons";
 import type { LinkRef } from "../types";

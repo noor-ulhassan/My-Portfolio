@@ -1,5 +1,5 @@
-import { Github, Linkedin, Youtube, Calendar, Mail, Instagram } from "lucide-react";
-import { FaXTwitter, FaMedium } from "react-icons/fa6";
+import { Calendar, Mail } from "lucide-react";
+import { FaXTwitter, FaMedium, FaLinkedin, FaYoutube, FaGithub, FaInstagram } from "react-icons/fa6";
 import type { ComponentType, SVGProps } from "react";
 
 export const DiscordIcon = (props: SVGProps<SVGSVGElement>) => (
@@ -10,15 +10,15 @@ export const DiscordIcon = (props: SVGProps<SVGSVGElement>) => (
 
 /** Maps icon-name strings (used in portfolio.json) to icon components. */
 export const ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
-  github: Github,
-  linkedin: Linkedin,
-  youtube: Youtube,
+  github: FaGithub,
+  linkedin: FaLinkedin,
+  youtube: FaYoutube,
   calendar: Calendar,
   mail: Mail,
   x: FaXTwitter,
   medium: FaMedium,
   discord: DiscordIcon,
-  instagram: Instagram,
+  instagram: FaInstagram,
 };
 
 /** Resolve an icon by name, rendering nothing if the name is unknown. */

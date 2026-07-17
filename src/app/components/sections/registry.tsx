@@ -10,7 +10,8 @@ import { EducationSection, type EducationData } from "./EducationSection";
 import { GithubSection, type GithubData } from "./GithubSection";
 import { PublicationsSection, type PublicationsData } from "./PublicationsSection";
 import { RecommendationsSection, type RecommendationsData } from "./RecommendationsSection";
-import { ContactSection, type ContactData } from "./ContactSection";
+import { Contact } from "@/components/sections/contact";
+import type { ContactData } from "./ContactSection";
 import { ThoughtsSection, type ThoughtsData } from "./ThoughtsSection";
 
 /**
@@ -70,7 +71,7 @@ export function SectionRenderer({ section, ctx }: { section: Section; ctx: Secti
     case "recommendations":
       return <RecommendationsSection title={section.title} data={section.data} />;
     case "contact":
-      return <ContactSection title={section.title} data={section.data} socials={ctx.socials} />;
+      return <Contact />;
     case "thoughts":
       return <ThoughtsSection title={section.title} data={section.data} />;
   }
