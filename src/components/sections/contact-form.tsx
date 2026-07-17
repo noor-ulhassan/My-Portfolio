@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useId, type FormEvent } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Check, Loader2, AlertCircle, Send } from "lucide-react";
 import { contact } from "@/content/site";
 import { cn } from "@/lib/utils";
