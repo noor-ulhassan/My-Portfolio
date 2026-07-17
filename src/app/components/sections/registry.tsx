@@ -20,7 +20,8 @@ import { ThoughtsSection, type ThoughtsData } from "./ThoughtsSection";
  * (with its exported `*Data` interface), a variant here, and a case in
  * `SectionRenderer`.
  */
-export type Section =
+export type SectionBase = { draft?: boolean };
+export type Section = SectionBase & (
   | { type: "hero"; data: HeroData }
   | { type: "experience"; title: string; data: ExperienceData }
   | { type: "techStack"; title: string; data: TechStackData }
@@ -32,7 +33,8 @@ export type Section =
   | { type: "publications"; title: string; data: PublicationsData }
   | { type: "recommendations"; title: string; data: RecommendationsData }
   | { type: "contact"; title: string; data: ContactData }
-  | { type: "thoughts"; title: string; data: ThoughtsData };
+  | { type: "thoughts"; title: string; data: ThoughtsData }
+);
 
 /** Top-level shape of `portfolio.json`. */
 export interface PortfolioData {

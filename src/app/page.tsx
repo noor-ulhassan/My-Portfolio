@@ -127,7 +127,7 @@ export default function Home() {
               </Reveal>
             )}
 
-            {portfolio.sections.map((section, i) => (
+            {portfolio.sections.filter((s: any) => !s.draft).map((section, i) => (
               <Reveal
                 key={i}
                 delay={section.type === "hero" ? 0 : 0.05}

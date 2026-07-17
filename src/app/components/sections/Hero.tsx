@@ -14,8 +14,10 @@ export interface HeroData {
 export function Hero({ data, time }: { data: HeroData; time: string }) {
   return (
     <>
+      <h1 className="text-red-500 animate-bounce font-bold text-center text-4xl mb-8">Site Work in Progress !</h1>
       {/* Profile Image */}
       <div className="relative mb-2 h-40 w-40 sm:h-56 sm:w-56 overflow-hidden">
+
         <Image
           src={data.image}
           alt="Profile"

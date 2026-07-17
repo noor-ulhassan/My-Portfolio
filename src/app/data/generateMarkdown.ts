@@ -8,7 +8,7 @@ function find<T extends Section["type"]>(
   sections: Section[],
   type: T
 ): Extract<Section, { type: T }> | undefined {
-  return sections.find((s) => s.type === type) as Extract<Section, { type: T }> | undefined;
+  return sections.find((s) => s.type === type && !(s as any).draft) as Extract<Section, { type: T }> | undefined;
 }
 
 /** Render Block[] to markdown: strings as paragraphs, `{list}` as bullet lists. */

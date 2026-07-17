@@ -289,7 +289,7 @@
       "slug": "thinking-before-building",
       "kicker": "Essay",
       "title": "Thinking Before Building",
-      "description": "A startup hackathon taught me that clarity beats speed \u2014 execution without direction just moves you faster in the wrong direction.",
+      "description": "A startup hackathon taught me that clarity beats speed — execution without direction just moves you faster in the wrong direction.",
       "date": "2026-07-03",
       "blocks": [
         {
@@ -502,7 +502,7 @@
       "data": {
         "image": "/me5.png",
         "name": "Noor ul Hassan",
-        "phonetic": "/no\u0259r \u028al \u02c8h\u0283s\u0259n/",
+        "phonetic": "/noər ʊl ˈhʃsən/",
         "noun": "noun",
         "timezone": {
           "label": "PKT",
@@ -594,7 +594,8 @@
             ]
           }
         ]
-      }
+      },
+      "draft": true
     },
     {
       "type": "techStack",
@@ -604,7 +605,6 @@
           {
             "name": "Languages",
             "skills": [
-      
               {
                 "name": "TypeScript",
                 "slug": "typescript"
@@ -613,7 +613,6 @@
                 "name": "JavaScript",
                 "slug": "javascript"
               }
-   
             ]
           },
           {
@@ -644,7 +643,6 @@
           {
             "name": "Backend & DB",
             "skills": [
-       
               {
                 "name": "Node.js",
                 "slug": "nodedotjs"
@@ -735,7 +733,8 @@
           "Most recently, I worked on **Meteor**, an AI SEO toolkit at Entrepreneurs First. This time, my product was being used by 6 YC-backed companies. Real users. Real traction. Real feedback loops.",
           "**So yes, hard work and consistency pay off. Each product was a step forward, even when it didn't feel like it at the time.**"
         ]
-      }
+      },
+      "draft": true
     },
     {
       "type": "project",
@@ -788,7 +787,8 @@
           "label": "Read the full case study",
           "url": "https://www.doubledart.fun/case-study"
         }
-      }
+      },
+      "draft": true
     },
     {
       "type": "thoughts",
@@ -797,7 +797,8 @@
         "count": 3,
         "viewAllLabel": "View more",
         "viewAllHref": "/thoughts"
-      }
+      },
+      "draft": true
     },
     {
       "type": "youtube",
@@ -839,7 +840,8 @@
           "label": "and much more on the channel",
           "url": "https://www.youtube.com/@noorulhasan01"
         }
-      }
+      },
+      "draft": true
     },
     {
       "type": "education",
@@ -855,17 +857,17 @@
             ]
           }
         ]
-      }
+      },
+      "draft": true
     },
     {
       "type": "github",
       "title": "GitHub Contributions",
       "data": {
         "username": "noor-ulhassan"
-      }
+      },
+      "draft": true
     },
-
-
     {
       "type": "contact",
       "title": "Get in Touch",
