@@ -1,6 +1,6 @@
 "use client";
 
-import { type Variants } from "motion/react";
+import { type Variants } from "framer-motion";
 import type { ReactNode } from "react";
 import { motionTags, type MotionTagName } from "./motion-tag";
 

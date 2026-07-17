@@ -1,435 +1,114 @@
 @import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
 
-/* next-themes is locked to dark (forcedTheme="dark"); the `.dark` class is
-   always present. We keep `:root` and `.dark` identical so `dark:` utilities
-   and any unscoped reads both resolve to the one dark theme. */
-@custom-variant dark (&:where(.dark, .dark *));
+@variant dark (&:where(.dark, .dark *));
 
-/* ----------------------------------------------------------------------------
-   Obsidian / Iris — design tokens  (DARK ONLY)
-   Near-black canvas with a faint blue cast. One warm-orange accent throughout.
-   Headings wear a silver-chrome "metallic" gradient (see .text-metallic).
----------------------------------------------------------------------------- */
-:root,
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
 .dark {
-  /* canvas + panels */
-  --background: #08080c;
-  --surface: #101017;
-  --surface-2: #16161f;
-
-  /* text — luminous silver scale so body copy reads "metallic" too */
-  --foreground: #f2f3f7;
-  --muted: #c2c5cf;
-  --faint: #7c7f8b;
-
-  /* hairlines */
-  --border: rgb(255 255 255 / 8%);
-  --border-strong: rgb(255 255 255 / 14%);
-
-  /* warm orange accent ramp */
-  --accent: #f97316;
-  --accent-soft: #fb923c;
-  --accent-strong: #ea580c;
-  --accent-contrast: #1a0d04;
-
-  --shadow-color: 0 0 0;
-
-  /* font roles — body grotesk / display grotesk / serif accent / mono */
-  --font-serif: var(--font-fraunces);
-  --font-sans: var(--font-hanken);
-  --font-display: var(--font-geist);
-  --font-mono: var(--font-jb);
-
-  /* shadcn surface mirrors (kept for any primitives that read them) */
-  --card: var(--surface);
-  --card-foreground: var(--foreground);
-  --popover: var(--surface);
-  --popover-foreground: var(--foreground);
-  --primary: var(--foreground);
-  --primary-foreground: var(--background);
-  --secondary: var(--surface-2);
-  --secondary-foreground: var(--foreground);
-  --muted-foreground: var(--muted);
-  --accent-foreground: var(--foreground);
-  --destructive: oklch(0.704 0.191 22.216);
-  --input: rgb(255 255 255 / 12%);
-  --ring: var(--accent);
-  --chart-1: var(--accent);
-  --chart-2: var(--accent-soft);
-  --chart-3: #fdba74;
-  --chart-4: #fed7aa;
-  --chart-5: #c2410c;
-  --radius: 0.75rem;
-  --sidebar: var(--surface);
-  --sidebar-foreground: var(--foreground);
-  --sidebar-primary: var(--accent);
-  --sidebar-primary-foreground: var(--accent-contrast);
-  --sidebar-accent: var(--surface-2);
-  --sidebar-accent-foreground: var(--foreground);
-  --sidebar-border: var(--border);
-  --sidebar-ring: var(--accent);
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-surface: var(--surface);
-  --color-surface-2: var(--surface-2);
   --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-faint: var(--faint);
-  --color-border: var(--border);
-  --color-border-strong: var(--border-strong);
-  --color-accent: var(--accent);
-  --color-accent-soft: var(--accent-soft);
-  --color-accent-strong: var(--accent-strong);
-  --color-accent-contrast: var(--accent-contrast);
-
-  --font-sans: var(--font-sans);
-  --font-serif: var(--font-fraunces);
-  --font-display: var(--font-display);
-  --font-mono: var(--font-jb);
-
-  /* fluid type scale */
-  --text-display: clamp(2.75rem, 1.5rem + 6vw, 7rem);
-  --text-display--line-height: 0.95;
-  --text-h2: clamp(2rem, 1.2rem + 3.2vw, 3.5rem);
-  --text-h2--line-height: 1.02;
-
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-
-  --font-heading: var(--font-display);
-
-  --color-sidebar-ring: var(--sidebar-ring);
-
-  --color-sidebar-border: var(--sidebar-border);
-
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-
-  --color-sidebar-accent: var(--sidebar-accent);
-
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-
-  --color-sidebar-primary: var(--sidebar-primary);
-
-  --color-sidebar-foreground: var(--sidebar-foreground);
-
-  --color-sidebar: var(--sidebar);
-
-  --color-chart-5: var(--chart-5);
-
-  --color-chart-4: var(--chart-4);
-
-  --color-chart-3: var(--chart-3);
-
-  --color-chart-2: var(--chart-2);
-
-  --color-chart-1: var(--chart-1);
-
-  --color-ring: var(--ring);
-
-  --color-input: var(--input);
-
-  --color-destructive: var(--destructive);
-
-  --color-accent-foreground: var(--accent-foreground);
-
-  --color-muted-foreground: var(--muted-foreground);
-
-  --color-secondary-foreground: var(--secondary-foreground);
-
-  --color-secondary: var(--secondary);
-
-  --color-primary-foreground: var(--primary-foreground);
-
-  --color-primary: var(--primary);
-
-  --color-popover-foreground: var(--popover-foreground);
-
-  --color-popover: var(--popover);
-
-  --color-card-foreground: var(--card-foreground);
-
-  --color-card: var(--card);
-
-  --radius-sm: calc(var(--radius) * 0.6);
-
-  --radius-md: calc(var(--radius) * 0.8);
-
-  --radius-lg: var(--radius);
-
-  --radius-xl: calc(var(--radius) * 1.4);
-
-  --radius-2xl: calc(var(--radius) * 1.8);
-
-  --radius-3xl: calc(var(--radius) * 2.2);
-
-  --radius-4xl: calc(var(--radius) * 2.6);
+  --font-sans: var(--font-dm-sans);
 }
 
-@layer base {
-  * {
-    border-color: var(--color-border);
-    @apply border-border outline-ring/50;
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-dm-sans), sans-serif;
+}
+
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
   }
 
-  html {
-    scroll-behavior: smooth;
-    /* offset for the fixed nav when jumping to #anchors */
-    scroll-padding-top: 6rem;
-    @apply font-sans;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-    /* Honor the OS setting: neutralize looping/long animations and transitions. */
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.001ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.001ms !important;
-    }
-  }
-
-  body {
-    background-color: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-    font-feature-settings: "ss01", "cv01";
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    /* Hard stop on accidental horizontal scroll. `clip` (not `hidden`) keeps
-       vertical scrolling, sticky, and Lenis untouched. Intentional horizontal
-       scroll regions (code card, marquee) isolate their own overflow. */
-    overflow-x: clip;
-    @apply bg-background text-foreground;
-  }
-
-  ::selection {
-    background-color: var(--accent);
-    color: var(--accent-contrast);
-  }
-
-  /* warm, theme-aware scrollbar */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--background);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--border-strong);
-    border-radius: 999px;
-    border: 3px solid var(--background);
-  }
-
-  h1, h2, h3, h4 {
-    font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+  to {
+    transform: translateX(-50%);
   }
 }
 
-@layer components {
-  /* eyebrow / mono section label */
-  .label {
-    font-family: var(--font-mono), ui-monospace, monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
+.animate-infinite-scroll {
+  animation: infinite-scroll 30s linear infinite;
+}
 
-  /* page rhythm — one consistent vertical step between sections */
-  .section {
-    padding-block: clamp(3.5rem, 2rem + 5vw, 6rem);
-  }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 
-  .container-x {
-    width: 100%;
-    margin-inline: auto;
-    max-width: 80rem;
-    padding-inline: clamp(1.25rem, 0.5rem + 3vw, 4rem);
-  }
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
-  /* animated underline for inline + nav links */
-  .link-underline {
-    position: relative;
-    display: inline-block;
-  }
-  .link-underline::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.12em;
-    height: 1px;
-    width: 100%;
-    background-color: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.45s var(--ease-out-expo);
-  }
-  .link-underline:hover::after,
-  .link-underline:focus-visible::after {
-    transform: scaleX(1);
-    transform-origin: left;
+/* ── Navbar entrance shine ─────────────────────────────────────────────
+   A light streak sweeps across the pill while a highlight travels around
+   its edge — the glint glass throws when it turns in the light. */
+@property --nav-shine-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes nav-edge-shine {
+  0%   { --nav-shine-angle: 0deg;   opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { --nav-shine-angle: 360deg; opacity: 0; }
+}
+
+/* glowing line that runs around the pill's edge — bluish in light mode so it
+   reads against the near-white pill; pure white in dark mode. */
+.nav-edge-shine {
+  background: conic-gradient(
+    from var(--nav-shine-angle),
+    transparent 0deg,
+    rgba(150, 185, 255, 0.9) 45deg,
+    transparent 95deg
+  );
+  padding: 1.5px;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  animation: nav-edge-shine 1.5s ease-in-out 0.45s 1 both;
+}
+
+.dark .nav-edge-shine {
+  background: conic-gradient(
+    from var(--nav-shine-angle),
+    transparent 0deg,
+    rgba(255, 255, 255, 0.95) 45deg,
+    transparent 95deg
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-edge-shine {
+    animation: none;
+    opacity: 0;
   }
 }
 
-@layer utilities {
-  /* serif italic accent for emphasized words */
-  .serif-italic {
-    font-family: var(--font-serif), ui-serif, Georgia, serif;
-    font-style: italic;
-    font-weight: 400;
-  }
-
-  /* brushed-silver "metallic" headline fill — the chrome look from the brief.
-     Falls back to a near-white solid where background-clip:text is unsupported. */
-  .text-metallic {
-    color: #e9ebf2;
-  }
-  /* warm "brushed-copper" metallic — the accent counterpart to the silver. */
-  .text-metallic-orange {
-    color: var(--accent-soft);
-  }
-  @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-    .text-metallic {
-      background-image: linear-gradient(
-        180deg,
-        #ffffff 0%,
-        #e9ebf2 38%,
-        #b7bccb 64%,
-        #878c9b 100%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      /* faint top sheen + grounding shadow for depth */
-      filter: drop-shadow(0 1px 0 rgb(255 255 255 / 0.06))
-        drop-shadow(0 2px 12px rgb(0 0 0 / 0.45));
-    }
-    .text-metallic-orange {
-      background-image: linear-gradient(
-        180deg,
-        #ffe3c2 0%,
-        #fdba74 32%,
-        #f97316 64%,
-        #c2410c 100%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      filter: drop-shadow(0 1px 8px rgb(249 115 22 / 0.25));
-    }
-  }
-
-  /* frosted panel used by floating cards + the nav pill */
-  .glass {
-    background-color: color-mix(in oklab, var(--surface) 70%, transparent);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border);
-  }
-
-  /* molten-orange gradient FILL for primary buttons (the metallic-orange,
-     rather than a flat accent). Pair with dark `--accent-contrast` text. */
-  .bg-metallic-orange {
-    background-image: linear-gradient(180deg, #fb9a4c 0%, #f97316 60%, #e8590c 100%);
-  }
-
-  .text-balance {
-    text-wrap: balance;
-  }
-  .text-pretty {
-    text-wrap: pretty;
-  }
-
-  /* subtle film grain overlay — fixed, non-interactive */
-  .grain::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 60;
-    pointer-events: none;
-    opacity: 0.035;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-  .dark .grain::before {
-    opacity: 0.06;
-  }
-
-  /* infinite horizontal scroll for the skills band */
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  .animate-marquee {
-    animation: marquee var(--marquee-duration, 40s) linear infinite;
-  }
-  .marquee-pause:hover .animate-marquee {
-    animation-play-state: paused;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .animate-marquee {
-      animation: none;
-    }
-  }
-
-  /* hairline grid used as section texture */
-  .grid-lines {
-    background-image:
-      linear-gradient(to right, var(--border) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-    background-size: 4rem 4rem;
-    -webkit-mask-image: radial-gradient(ellipse at center, black 10%, transparent 70%);
-    mask-image: radial-gradient(ellipse at center, black 10%, transparent 70%);
-  }
-
-  /* Aceternity-style Spotlight: a soft conic blob that drifts in on load. */
-  @keyframes spotlight {
-    0% {
-      opacity: 0;
-      transform: translate(-72%, -62%) scale(0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-50%, -40%) scale(1);
-    }
-  }
-  .animate-spotlight {
-    animation: spotlight 2.4s var(--ease-out-expo) 0.2s forwards;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .animate-spotlight {
-      animation: none;
-      opacity: 1;
-    }
-  }
+/* Animated theme toggler — suppress default browser view-transition so JS animation takes over */
+[data-magicui-theme-vt]::view-transition-old(root),
+[data-magicui-theme-vt]::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
-/* Lenis smooth-scroll base styles (only active once Lenis adds these classes). */
-html.lenis,
-html.lenis body {
-  height: auto;
+[data-magicui-theme-vt]::view-transition-old(root) {
+  z-index: 1;
 }
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
+
+[data-magicui-theme-vt]::view-transition-new(root) {
+  z-index: 9999;
 }

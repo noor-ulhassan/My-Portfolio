@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { profile } from "@/content/site";
-import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -152,8 +151,6 @@ export default function PrivacyPage() {
           </Clause>
         </div>
       </main>
-
-      <SiteFooter />
     </>
   );
 }

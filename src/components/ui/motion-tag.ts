@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import type { ComponentProps } from "react";
 
 /** Intrinsic element tags we animate. Extend as needed. */

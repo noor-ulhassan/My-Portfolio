@@ -500,7 +500,7 @@
     {
       "type": "hero",
       "data": {
-        "image": "/me.png",
+        "image": "/me5.png",
         "name": "Noor ul Hassan",
         "phonetic": "/no\u0259r \u028al \u02c8h\u0283s\u0259n/",
         "noun": "noun",
@@ -803,10 +803,10 @@
       "type": "youtube",
       "title": "My YouTube Channel",
       "data": {
-        "image": "/youtube-profile.png",
+        "image": "/adjusted.png",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png",
-        "name": "Aditya's YouTube Channel",
-        "url": "https://www.youtube.com/@theracecondition",
+        "name": "Noor's YouTube Channel",
+        "url": "https://www.youtube.com/@noorulhasan01",
         "tagline": "where i break down complex systems and engineering ideas",
         "community": {
           "url": "https://discord.gg/ry4YCJaShK",
@@ -837,7 +837,7 @@
         ],
         "footerLink": {
           "label": "and much more on the channel",
-          "url": "https://www.youtube.com/@theracecondition/videos"
+          "url": "https://www.youtube.com/@noorulhasan01"
         }
       }
     },
