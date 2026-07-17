@@ -1,45 +1,23 @@
 {
   "meta": {
-    "siteUrl": "https://www.justaditya.com/",
-    "calendarUrl": "https://cal.com/adi-patil/30min",
-    "email": "adityapatil24680@gmail.com"
+    "siteUrl": "https://noor01.vercel.app/",
+    "calendarUrl": "https://cal.com/noorulhassan/30min",
+    "email": "noorulhassan01.dev@gmail.com"
   },
   "socials": [
     {
       "label": "GitHub",
-      "href": "https://github.com/PythonHacker24",
+      "href": "https://github.com/noor-ulhassan",
       "icon": "github"
     },
     {
       "label": "LinkedIn",
-      "href": "https://www.linkedin.com/in/aditya-patil-260a631b2/",
+      "href": "https://www.linkedin.com/in/noor-ul-hassan01/",
       "icon": "linkedin"
-    },
-    {
-      "label": "X",
-      "href": "https://x.com/firecaffeine",
-      "icon": "x"
-    },
-    {
-      "label": "YouTube",
-      "href": "https://youtube.com/@theracecondition",
-      "icon": "youtube"
-    },
-    {
-      "label": "Discord",
-      "href": "https://discord.gg/ry4YCJaShK",
-      "icon": "discord"
-    },
-    {
-      "label": "Medium",
-      "href": "https://medium.com/@adityapatil24680",
-      "icon": "medium"
-    },
-    {
-      "label": "Instagram",
-      "href": "https://www.instagram.com/loves_coffeex/",
-      "icon": "instagram"
     }
+
+ 
+
   ],
   "posts": [
     {
