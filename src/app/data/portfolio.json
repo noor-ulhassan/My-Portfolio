@@ -716,11 +716,11 @@
     },
     {
       "type": "project",
-      "title": "Coolest Experiment with Consumer Tech",
+      "title": "Coolest Application so far",
       "data": {
         "name": "EduQuest",
-        "link": "https://www.doubledart.fun/",
-        "subtitle": "Anonymous crush matching for NIT Hamirpur, Class of 2026",
+        "link": "https://edu-questd.vercel.app/",
+        "subtitle": "Interactive CS education platform.",
         "image": "/doubledart-logo.svg",
         "cardImage": "/doubledart-illustration.png",
         "body": [
@@ -835,16 +835,14 @@
             ]
           }
         ]
-      },
-      "draft": true
+      }
     },
     {
       "type": "github",
       "title": "GitHub Contributions",
       "data": {
         "username": "noor-ulhassan"
-      },
-      "draft": true
+      }
     },
     {
       "type": "contact",
