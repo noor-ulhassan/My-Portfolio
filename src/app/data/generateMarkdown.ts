@@ -134,6 +134,21 @@ export function generateMarkdown(data: PortfolioData, time: string): string {
     parts.push(`## ${thoughts.title}\n\n${items}`);
   }
 
+  // Gallery
+  const gallery = find(sections, "gallery");
+  if (gallery) {
+    const { description, items } = gallery.data;
+    const lines = [`## ${gallery.title}`];
+    if (description) lines.push("", blocks(description));
+    if (items.length) {
+      lines.push("");
+      items.forEach((item) => {
+        lines.push(`- [${item.type}] ${item.caption || item.alt || "Media"}: ${item.src}`);
+      });
+    }
+    parts.push(lines.join("\n"));
+  }
+
   // Get in Touch
   const contact = find(sections, "contact");
   if (contact) {

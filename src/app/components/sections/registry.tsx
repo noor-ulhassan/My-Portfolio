@@ -13,6 +13,7 @@ import { RecommendationsSection, type RecommendationsData } from "./Recommendati
 import { Contact } from "@/components/sections/contact";
 import type { ContactData } from "./ContactSection";
 import { ThoughtsSection, type ThoughtsData } from "./ThoughtsSection";
+import { GallerySection, type GalleryData } from "./GallerySection";
 
 /**
  * Discriminated union of every section. Each variant pairs a `type` tag with
@@ -34,6 +35,7 @@ export type Section = SectionBase & (
   | { type: "recommendations"; title: string; data: RecommendationsData }
   | { type: "contact"; title: string; data: ContactData }
   | { type: "thoughts"; title: string; data: ThoughtsData }
+  | { type: "gallery"; title: string; data: GalleryData }
 );
 
 /** Top-level shape of `portfolio.json`. */
@@ -76,5 +78,7 @@ export function SectionRenderer({ section, ctx }: { section: Section; ctx: Secti
       return <Contact />;
     case "thoughts":
       return <ThoughtsSection title={section.title} data={section.data} />;
+    case "gallery":
+      return <GallerySection title={section.title} data={section.data} />;
   }
 }
