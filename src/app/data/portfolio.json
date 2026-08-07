@@ -515,7 +515,7 @@
       }
     },
     {
-      "type": "experience",
+      "type": "_hide_experience",
       "title": "Experience",
       "data": {
         "featured": {
@@ -721,7 +721,7 @@
       }
     },
     {
-      "type": "expandableCard",
+      "type": "_hide_expandableCard",
       "title": "In Between These Experiences",
       "data": {
         "heading": "The Product Building Journey",
@@ -738,7 +738,7 @@
       }
     },
     {
-      "type": "project",
+      "type": "_hide_project",
       "title": "Coolest Experiment with Consumer Tech",
       "data": {
         "name": "EduQuest",
@@ -791,7 +791,7 @@
       }
     },
     {
-      "type": "thoughts",
+      "type": "_hide_thoughts",
       "title": "Thinking",
       "data": {
         "count": 3,
@@ -800,7 +800,7 @@
       }
     },
     {
-      "type": "youtube",
+      "type": "_hide_youtube",
       "title": "My YouTube Channel",
       "data": {
         "image": "/adjusted.png",
@@ -866,6 +866,45 @@
     },
 
 
+    {
+      "type": "gallery",
+      "title": "Beyond the Screen",
+      "data": {
+        "description": [
+          "When I'm not building products, I'm usually out traveling to the mountains, hiking up a trail, or buried in a good book. Here are some moments from my life outside work."
+        ],
+        "items": [
+          {
+            "type": "image",
+            "src": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop",
+            "alt": "Mountain peaks",
+            "caption": "Recent travels to the mountains",
+            "aspectRatio": "portrait"
+          },
+          {
+            "type": "image",
+            "src": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1200&auto=format&fit=crop",
+            "alt": "Hiking trail",
+            "caption": "On the trail",
+            "aspectRatio": "square"
+          },
+          {
+            "type": "image",
+            "src": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1200&auto=format&fit=crop",
+            "alt": "Reading books",
+            "caption": "Current read",
+            "aspectRatio": "square"
+          },
+          {
+            "type": "image",
+            "src": "https://images.unsplash.com/photo-1501554728187-ce583db33af7?q=80&w=1200&auto=format&fit=crop",
+            "alt": "Wanderlust",
+            "caption": "Exploring nature",
+            "aspectRatio": "portrait"
+          }
+        ]
+      }
+    },
     {
       "type": "contact",
       "title": "Get in Touch",
