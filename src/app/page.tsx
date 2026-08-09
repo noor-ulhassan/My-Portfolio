@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { QRCodeSVG } from "qrcode.react";
-import { QrCode, X, User, Bot, Code2, ArrowUpRight, Copy, Check } from "lucide-react";
+import { QrCode, X, User, Bot, Code2, ArrowUpRight, Copy, Check, Download } from "lucide-react";
 
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Reveal } from "./components/Reveal";
@@ -211,6 +211,17 @@ export default function Home() {
         >
           <Icon name="calendar" className="h-5 w-5" />
         </a>
+        {portfolio.meta.resumeUrl && (
+          <a
+            href={portfolio.meta.resumeUrl}
+            download
+            aria-label="Download resume"
+            title="Download resume"
+            className="text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors hover:scale-110"
+          >
+            <Download className="h-5 w-5" />
+          </a>
+        )}
       </motion.nav>
 
       {/* QR Code Modal */}

@@ -4,7 +4,7 @@ import { Hero, type HeroData } from "./Hero";
 import { ExperienceSection, type ExperienceData } from "./ExperienceSection";
 import { TechStackSection, type TechStackData } from "./TechStackSection";
 import { ExpandableCardSection, type ExpandableCardData } from "./ExpandableCardSection";
-import { ProjectSection, type ProjectData } from "./ProjectSection";
+import { ProjectSection, type ProjectsData } from "./ProjectSection";
 import { YouTubeSection, type YouTubeData } from "./YouTubeSection";
 import { EducationSection, type EducationData } from "./EducationSection";
 import { GithubSection, type GithubData } from "./GithubSection";
@@ -27,7 +27,7 @@ export type Section = SectionBase & (
   | { type: "experience"; title: string; data: ExperienceData }
   | { type: "techStack"; title: string; data: TechStackData }
   | { type: "expandableCard"; title: string; data: ExpandableCardData }
-  | { type: "project"; title: string; data: ProjectData }
+  | { type: "project"; title: string; data: ProjectsData }
   | { type: "youtube"; title: string; data: YouTubeData }
   | { type: "education"; title: string; data: EducationData }
   | { type: "github"; title: string; data: GithubData }

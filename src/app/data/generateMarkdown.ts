@@ -57,17 +57,19 @@ export function generateMarkdown(data: PortfolioData, time: string): string {
     parts.push(`## ${card.title}\n\n### ${card.data.heading}\n\n${blocks(card.data.body)}`);
   }
 
-  // Coolest Experiment (project)
+  // Projects
   const project = find(sections, "project");
   if (project) {
-    const p = project.data;
-    const lines = [`## ${project.title}`, "", `### ${p.name}`];
-    if (p.subtitle) lines.push(`**${p.subtitle}**`);
-    if (p.link) lines.push(`[${p.link}](${p.link})`);
-    lines.push("", blocks(p.body));
-    if (p.stats?.length) lines.push("", p.stats.map((s) => `- ${s.value} ${s.label}`).join("\n"));
-    if (p.footerLink) lines.push("", `${p.footerLink.label}: [${p.footerLink.url}](${p.footerLink.url})`);
-    parts.push(lines.join("\n"));
+    const items = project.data.items.map((p) => {
+      const lines = [`### ${p.name}`];
+      if (p.subtitle) lines.push(`**${p.subtitle}**`);
+      if (p.link) lines.push(`[${p.link}](${p.link})`);
+      lines.push("", blocks(p.body));
+      if (p.stats?.length) lines.push("", p.stats.map((s) => `- ${s.value} ${s.label}`).join("\n"));
+      if (p.footerLink) lines.push("", `${p.footerLink.label}: [${p.footerLink.url}](${p.footerLink.url})`);
+      return lines.join("\n");
+    });
+    parts.push([`## ${project.title}`, ...items].join("\n\n"));
   }
 
   // Education

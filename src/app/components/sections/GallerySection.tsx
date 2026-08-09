@@ -1,6 +1,5 @@
 import { SectionShell } from "../SectionShell";
 import { RichText } from "../RichText";
-import { WaterImage } from "../WaterImage";
 import type { Block } from "../types";
 
 export interface GalleryItem {
@@ -42,7 +41,13 @@ export function GallerySection({ title, data }: { title: string; data: GalleryDa
                 className={`relative group overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 ${aspectClass}`}
               >
                 {item.type === "image" ? (
-                  <WaterImage src={item.src} alt={item.alt || ""} />
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={item.src}
+                    alt={item.alt || ""}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 ) : (
                   <video
                     src={item.src}
