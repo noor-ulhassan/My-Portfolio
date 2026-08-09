@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { SectionShell } from "../SectionShell";
 import { RichText } from "../RichText";
 import type { Block } from "../types";
@@ -14,6 +18,44 @@ export interface GalleryItem {
 export interface GalleryData {
   description?: Block[];
   items: GalleryItem[];
+}
+
+/** Only fetches and plays its video once scrolled into view, and pauses again
+ *  once it leaves — so a gallery of many clips doesn't all load/play at once. */
+function LazyVideo({ src, poster }: { src: string; poster?: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), {
+      rootMargin: "200px",
+      threshold: 0.25,
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (inView) el.play().catch(() => {});
+    else el.pause();
+  }, [inView]);
+
+  return (
+    <video
+      ref={ref}
+      src={src}
+      poster={poster}
+      preload="none"
+      loop
+      muted
+      playsInline
+      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+    />
+  );
 }
 
 export function GallerySection({ title, data }: { title: string; data: GalleryData }) {
@@ -41,25 +83,19 @@ export function GallerySection({ title, data }: { title: string; data: GalleryDa
                 className={`relative group overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 ${aspectClass}`}
               >
                 {item.type === "image" ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
+                  <Image
                     src={item.src}
                     alt={item.alt || ""}
+                    fill
+                    quality={90}
+                    sizes="(max-width: 640px) 100vw, 50vw"
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (
-                  <video
-                    src={item.src}
-                    poster={item.poster}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                  <LazyVideo src={item.src} poster={item.poster} />
                 )}
-                
+
                 {/* Caption overlay */}
                 {item.caption && (
                   <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">

@@ -21,7 +21,7 @@ function validate({ name, email, message }: Fields): Errors {
 }
 
 const fieldBase =
-  "w-full rounded-xl border bg-surface/40 px-4 py-3 text-foreground outline-none transition-colors placeholder:text-faint focus:border-accent focus:ring-2 focus:ring-accent/30";
+  "w-full rounded-lg border bg-transparent px-4 py-3 text-black dark:text-white outline-none transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-600 focus:border-black dark:focus:border-white";
 
 export function ContactForm({ toEmail }: { toEmail: string }) {
   const [fields, setFields] = useState<Fields>({ name: "", email: "", message: "" });
@@ -93,7 +93,7 @@ export function ContactForm({ toEmail }: { toEmail: string }) {
   }
 
   return (
-    <div className="relative rounded-3xl border border-border bg-surface/30 p-6 sm:p-8">
+    <div className="relative">
       <AnimatePresence mode="wait" initial={false}>
         {status === "success" ? (
           <motion.div
@@ -104,13 +104,13 @@ export function ContactForm({ toEmail }: { toEmail: string }) {
             className="flex flex-col items-center justify-center gap-4 py-12 text-center"
             role="status"
           >
-            <span className="grid size-14 place-items-center rounded-full bg-accent/15 text-accent">
+            <span className="grid size-14 place-items-center rounded-full bg-gray-100 dark:bg-zinc-800 text-black dark:text-white">
               <Check className="size-7" strokeWidth={2} aria-hidden />
             </span>
-            <h3 className="text-metallic font-display text-2xl font-semibold tracking-tight">
+            <h3 className="text-lg font-semibold text-black dark:text-white">
               {usedMailto ? "Opening your email app" : "Message sent"}
             </h3>
-            <p className="max-w-xs text-pretty text-muted">
+            <p className="max-w-xs text-pretty text-sm leading-relaxed text-gray-600 dark:text-gray-400">
               {usedMailto
                 ? "Your email client should open with the message ready to send."
                 : "Thanks for reaching out — I'll get back to you soon."}
@@ -118,7 +118,7 @@ export function ContactForm({ toEmail }: { toEmail: string }) {
             <button
               type="button"
               onClick={() => setStatus("idle")}
-              className="link-underline text-sm text-accent"
+              className="text-sm font-medium text-black dark:text-white underline underline-offset-4 decoration-gray-300 dark:decoration-gray-700 hover:decoration-black dark:hover:decoration-white transition-colors"
             >
               Send another
             </button>
@@ -156,7 +156,7 @@ export function ContactForm({ toEmail }: { toEmail: string }) {
                     autoComplete="name"
                     aria-invalid={!!errors.name}
                     aria-describedby={describedBy}
-                    className={cn(fieldBase, errors.name ? "border-red-500/60" : "border-border")}
+                    className={cn(fieldBase, errors.name ? "border-red-500/60" : "border-gray-200 dark:border-gray-700")}
                   />
                 )}
               </Field>
@@ -172,7 +172,7 @@ export function ContactForm({ toEmail }: { toEmail: string }) {
                     autoComplete="email"
                     aria-invalid={!!errors.email}
                     aria-describedby={describedBy}
-                    className={cn(fieldBase, errors.email ? "border-red-500/60" : "border-border")}
+                    className={cn(fieldBase, errors.email ? "border-red-500/60" : "border-gray-200 dark:border-gray-700")}
                   />
                 )}
               </Field>
@@ -192,7 +192,7 @@ export function ContactForm({ toEmail }: { toEmail: string }) {
                   className={cn(
                     fieldBase,
                     "resize-none",
-                    errors.message ? "border-red-500/60" : "border-border",
+                    errors.message ? "border-red-500/60" : "border-gray-200 dark:border-gray-700",
                   )}
                 />
               )}
@@ -210,7 +210,7 @@ export function ContactForm({ toEmail }: { toEmail: string }) {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="bg-metallic-orange group inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-medium text-accent-contrast transition-colors duration-300 hover:brightness-[1.04] disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-black dark:bg-white px-6 py-3 text-sm font-semibold text-white dark:text-black transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
             >
               {status === "submitting" ? (
                 <>
@@ -250,7 +250,7 @@ function Field({
   const errorId = `${id}-${name}-error`;
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={id} className="font-mono text-xs uppercase tracking-widest text-faint">
+      <label htmlFor={id} className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-600">
         {label}
       </label>
       {children(id, error ? errorId : undefined)}

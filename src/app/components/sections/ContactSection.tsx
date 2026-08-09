@@ -1,6 +1,7 @@
 import { SectionShell } from "../SectionShell";
 import { Icon } from "../icons";
-import { WaterImage } from "../WaterImage";
+import { ContactForm } from "@/components/sections/contact-form";
+import { profile } from "@/content/site";
 import type { Social } from "../types";
 
 export interface Cta {
@@ -30,10 +31,10 @@ export function ContactSection({
   return (
     <SectionShell title={title}>
       <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8 overflow-hidden">
-        <div className="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+        <div className="grid gap-8 sm:grid-cols-2 sm:gap-10">
 
           {/* Left: text content */}
-          <div className="flex-1 min-w-0">
+          <div className="min-w-0">
             <h3 className="text-lg font-semibold text-black dark:text-white">{data.heading}</h3>
             <p className="mt-2 text-base leading-relaxed text-gray-600 dark:text-gray-400">{data.subheading}</p>
 
@@ -78,20 +79,10 @@ export function ContactSection({
             </div>
           </div>
 
-          {/* Right: illustration card */}
-          {data.image && (
-            <div className="shrink-0 self-start sm:self-center">
-              <div className="relative rotate-2 hover:rotate-0 transition-transform duration-300 ease-out">
-                {/* Card shadow layers for depth */}
-                <div className="absolute inset-0 rounded-2xl bg-gray-200 dark:bg-gray-700 translate-x-1.5 translate-y-1.5" />
-                <div className="relative rounded-2xl overflow-hidden w-40 sm:w-44 aspect-square border border-gray-200 dark:border-gray-700 shadow-md">
-                  <WaterImage src={data.image} alt="Illustration" />
-                  {/* Subtle overlay for dark mode blend */}
-                  <div className="absolute inset-0 bg-black/0 dark:bg-black/10 pointer-events-none" />
-                </div>
-              </div>
-            </div>
-          )}
+          {/* Right: contact form */}
+          <div className="min-w-0 border-t border-gray-200 dark:border-gray-700 pt-8 sm:border-t-0 sm:border-l sm:pl-10 sm:pt-0">
+            <ContactForm toEmail={profile.email} />
+          </div>
 
         </div>
       </div>
