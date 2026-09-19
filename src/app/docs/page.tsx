@@ -60,6 +60,7 @@ const NAV = [
   { id: "idea", label: "Core idea" },
   { id: "data", label: "The data file" },
   { id: "sections", label: "Section types" },
+  { id: "testimonials", label: "Testimonials" },
   { id: "blocks", label: "Rich text" },
   { id: "socials", label: "Socials" },
   { id: "arrange", label: "Rearrange" },
@@ -255,6 +256,7 @@ npm run start`}</CodeBlock>
                   ["github", "A GitHub contributions graph (give it a username)."],
                   ["publications", "Papers with an abstract you can expand."],
                   ["recommendations", "Quotes from people, with name and role."],
+                  ["testimonials", "Verified client feedback in a responsive quote grid."],
                   ["contact", "Call-to-action buttons and your social links."],
                 ].map(([type, desc]) => (
                   <tr key={type} className="border-b border-gray-100 dark:border-zinc-900 last:border-0">
@@ -280,6 +282,35 @@ npm run start`}</CodeBlock>
     "footerLink": { "label": "Read more", "url": "https://example.com" }
   }
 }`}</CodeBlock>
+        </DocSection>
+
+        <DocSection id="testimonials" title="Client testimonials">
+          <p>
+            Testimonials are configured in the same ordered <C>sections</C> array. Add a client by
+            appending an item, remove one by deleting its item, and move the entire block to place
+            the section anywhere on the page. The section stays hidden until it has at least one item.
+          </p>
+          <CodeBlock label="a testimonials section">{`{
+  "type": "testimonials",
+  "title": "Client Testimonials",
+  "data": {
+    "items": [
+      {
+        "name": "Client Name",
+        "role": "Founder",
+        "company": "Company Name",
+        "rating": 5,
+        "avatar": "/client-name.jpg",
+        "quote": "A verified, concise description of the result and collaboration.",
+        "link": "https://example.com"
+      }
+    ]
+  }
+}`}</CodeBlock>
+          <p>
+            Only add feedback you have permission to publish. The optional <C>link</C> makes the
+            client attribution point to a public profile, company, or case study.
+          </p>
         </DocSection>
 
         <DocSection id="blocks" title="Rich text (the Block type)">

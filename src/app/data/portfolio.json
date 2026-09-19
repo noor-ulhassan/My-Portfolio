@@ -817,6 +817,20 @@
       },
       "draft": true
     },
+        {
+      "type": "testimonials",
+      "title": "Client Testimonials",
+      "data": {
+        "items": [
+          {
+            "name": "Zahid Usman",
+            "role": "Wholesale Business Owner",
+            "rating": 5,
+            "quote": "Noor took the time to understand the pace and practical requirements of our wholesale business and delivered a robust POS system tailored to how we work. It has made sales, inventory tracking, and day-to-day operations more organized and dependable for our team."
+          }
+        ]
+      }
+    },
     {
       "type": "education",
       "title": "Education",
@@ -881,6 +895,7 @@
         ]
       }
     },
+  
     {
       "type": "contact",
       "title": "Get in Touch",

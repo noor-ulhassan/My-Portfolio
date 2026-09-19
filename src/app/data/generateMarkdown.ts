@@ -109,6 +109,20 @@ export function generateMarkdown(data: PortfolioData, time: string): string {
     parts.push(`## ${recommendations.title}\n\n${items}`);
   }
 
+  // Client testimonials
+  const testimonials = find(sections, "testimonials");
+  if (testimonials && testimonials.data.items.length > 0) {
+    const items = testimonials.data.items
+      .map((t) => {
+        const attribution = [t.role, t.company].filter(Boolean).join(", ");
+        const name = t.link ? `[${t.name}](${t.link})` : t.name;
+        const rating = t.rating ? `\n> Rating: ${t.rating}/5` : "";
+        return `> ${t.quote}${rating}\n>\n> — ${name}${attribution ? `, ${attribution}` : ""}`;
+      })
+      .join("\n\n");
+    parts.push(`## ${testimonials.title}\n\n${items}`);
+  }
+
   // YouTube
   const youtube = find(sections, "youtube");
   if (youtube) {

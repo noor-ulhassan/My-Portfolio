@@ -10,6 +10,7 @@ import { EducationSection, type EducationData } from "./EducationSection";
 import { GithubSection, type GithubData } from "./GithubSection";
 import { PublicationsSection, type PublicationsData } from "./PublicationsSection";
 import { RecommendationsSection, type RecommendationsData } from "./RecommendationsSection";
+import { TestimonialsSection, type TestimonialsData } from "./TestimonialsSection";
 import { ContactSection, type ContactData } from "./ContactSection";
 import { ThoughtsSection, type ThoughtsData } from "./ThoughtsSection";
 import { GallerySection, type GalleryData } from "./GallerySection";
@@ -32,6 +33,7 @@ export type Section = SectionBase & (
   | { type: "github"; title: string; data: GithubData }
   | { type: "publications"; title: string; data: PublicationsData }
   | { type: "recommendations"; title: string; data: RecommendationsData }
+  | { type: "testimonials"; title: string; data: TestimonialsData }
   | { type: "contact"; title: string; data: ContactData }
   | { type: "thoughts"; title: string; data: ThoughtsData }
   | { type: "gallery"; title: string; data: GalleryData }
@@ -73,6 +75,8 @@ export function SectionRenderer({ section, ctx }: { section: Section; ctx: Secti
       return <PublicationsSection title={section.title} data={section.data} />;
     case "recommendations":
       return <RecommendationsSection title={section.title} data={section.data} />;
+    case "testimonials":
+      return <TestimonialsSection title={section.title} data={section.data} />;
     case "contact":
       return <ContactSection title={section.title} data={section.data} socials={ctx.socials} />;
     case "thoughts":
